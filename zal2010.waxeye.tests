@@ -85,7 +85,7 @@
  (entry (headword #\р #\а #\б #\а #\́ ) (def (main_symbol #\ж #\о) (index #\1 (scheme #\b)) (extras (difficult_plural) (difficult_plural_genitive))))
 
  "изба́ ж, 1d//1d'"
- (entry (headword #\и #\з #\б #\а #\́ ) (def (main_symbol #\ж) (index #\1 (scheme #\d)) (index #\1 (scheme #\d #\'))))
+ (entry (headword #\и #\з #\б #\а #\́ ) (def (main_symbol #\ж) (index #\1 (scheme #\d)) (slash_slash) (index #\1 (scheme #\d #\'))))
 
  "на́долба ж 1a [//__на́долб__]"
  (entry (headword #\н #\а #\́ #\д #\о #\л #\б #\а) (def (main_symbol #\ж) (index #\1 (scheme #\a)) (alt_lemma (headword #\н #\а #\́ #\д #\о #\л #\б))))
@@ -98,4 +98,7 @@
 
  "судьба́ ж 1*d △ _Р. мн._ су́деб //_устар._ суде́б ✧ во́лею суде́б; каки́ми судьба́ми"
  (entry (headword #\с #\у #\д #\ь #\б #\а #\́) (def (main_symbol #\ж) (index #\1 * (scheme #\d)) (irregular_forms (irregular_plural_gen (forms (form (headword #\с #\у #\́ #\д #\е #\б)) (form (old) (headword #\с #\у #\д #\е #\́ #\б))))) (idioms (idiom #\в #\о #\́ #\л #\е #\ю #\  #\с #\у #\д #\е #\́ #\б) (idiom #\к #\а #\к #\и #\́ #\м #\и #\  #\с #\у #\д #\ь #\б #\а #\́ #\м #\и))))
+
+ "луна́-ры́ба жо, 1d + 1a, _мн. затрудн._"
+ (entry (headword #\л #\у #\н #\а #\́ #\- #\р #\ы #\́ #\б #\а) (def (main_symbol #\ж #\о) (index #\1 (scheme #\d)) (plus) (index #\1 (scheme #\a)) (difficult_plural)))
 )

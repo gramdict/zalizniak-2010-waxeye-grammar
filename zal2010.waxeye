@@ -15,9 +15,15 @@ Number <= +[0-9]
 
 headword <- (LETTER *(LETTER | STRESS_MARK | '-'))
 
-def <- main_symbol ?comma ?(?ws index *(:'//' index)) 
+def <- main_symbol ?comma ?(?ws index *(index_sep index)) 
         ?extras ?irregular_forms ?idioms
         ?comment ?alt_lemma
+
+index_sep <= slash_slash | plus
+
+slash_slash <- :'//'
+
+plus <- ?ws :'+' ?ws 
 
 idioms <- ?ws :'✧' ?ws idiom (:';' ?ws idiom)
 
@@ -44,8 +50,9 @@ extras <= *(comma extra)
 extra <=  difficult_plural 
         | difficult_plural_genitive
 
-difficult_plural <- :'_мн. избегается из-за совпадений с_ раб'
 difficult_plural_genitive <- :'_Р. мн. затрудн._'
+difficult_plural <- :'_мн. затрудн._'
+        | :'_мн. избегается из-за совпадений с_ раб'
 
 index <- (index_number ?'*' scheme ?'—') | '0'
 
