@@ -25,9 +25,9 @@ which has not been released yet but can be built from latest master using these 
 
 ## Roadmap
 
-The next logical step would be creating a script that would run the generated parser on each dictionary entry, 
+The next logical step would be creating a script that would run the generated parser on each dictionary entry and 
 report entries that failed to parse. This will help us finish the grammar.
-The script will also write the successfully parsed entries to a file of a popular format
+The script will also write successfully parsed entries to a file of a popular format
 such as XML, JSON or YAML. This would be the end goal of this project, having the dictionary in a format
 that can be easily consumed by most programming languages.
 
