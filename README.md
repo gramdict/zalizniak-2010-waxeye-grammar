@@ -31,3 +31,26 @@ The script will also write the successfully parsed entries to a file of a popula
 such as XML, JSON or YAML. This would be the end goal of this project, having the dictionary in a format
 that can be easily consumed by most programming languages.
 
+## Why Waxeye?
+
+Wikipedia lists [hundreds](https://en.wikipedia.org/wiki/Comparison_of_parser_generators) of parser generators.
+Of course, I haven't tried them all.
+Before Waxeye I tried ANTLR and I really struggled trying to get it to do what I wanted
+(see my StackOverflow questions 
+[1](https://stackoverflow.com/a/69410054/1291717) and 
+[2](https://stackoverflow.com/q/69415886/1291717)).
+
+With ANTLR, I had to write my own test runner and my development cycle was:
+
+1. Generate the parser.
+2. Build the parser and run tests.
+
+With Waxeye's built-in test runner, the development cycle is just one step: click on run_tests.bat. 
+The results are available immediately as no intermediate code is generated.
+
+Waxeye also has an [online workbench](https://waxeye-org.github.io/waxeye/demo.html#calc) which is even faster:
+the results are available as you type.
+I tried it and it simply worked, unlike ANTLR. That's what got me hooked on Waxeye.
+
+
+
