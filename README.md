@@ -1,0 +1,33 @@
+# Zalizniak-2010 Waxeye Grammar
+
+This repo hosts a formal grammar of [Zalizniak's Grammatical Dictionary](https://github.com/gramdict/zalizniak-2010) 
+in [Waxeye](https://github.com/waxeye-org/waxeye) format. 
+The grammar is not finished yet but it already covers a large variety of dictionary entries.
+
+The grammar ([zal2010.waxeye](https://github.com/gramdict/zalizniak-2010-waxeye-grammar/blob/master/zal2010.waxeye)) 
+comes with a suite of tests 
+([zal2010.waxeye.tests](https://github.com/gramdict/zalizniak-2010-waxeye-grammar/blob/master/zal2010.waxeye.tests)).
+A typical test has the following form:
+
+```
+"ма́ма жо 1a"
+(entry (headword #\м #\а #\́ #\м #\а) (def (main_symbol #\ж #\о) (index #\1 (scheme #\a))
+```
+
+The first line is the input and the second line is the expected output in the form of a Racket S-expression.
+In the above example we are expecting an (entry) with a (headword) of ма́ма and a definition comprising 
+the main_symbol жо and an index of 1a.
+
+The file run_tests.bat contains the command line to run the tests. It needs version 0.8.1 of Waxeye
+which has not been released yet but can be built from latest master using these instructions:
+[Building from Source](https://github.com/waxeye-org/waxeye#building-from-source). The grammar and tests rely on
+[these changes](https://github.com/waxeye-org/waxeye/pull/64) (adding Unicode support) which are not found in version 0.8.0.
+
+## Roadmap
+
+The next logical step would be creating a script that would run the generated parser on each dictionary entry, 
+report entries that failed to parse. This will help us finish the grammar.
+The script will also write the successfully parsed entries to a file of a popular format
+such as XML, JSON or YAML. This would be the end goal of this project, having the dictionary in a format
+that can be easily consumed by most programming languages.
+
