@@ -101,4 +101,7 @@
 
  "луна́-ры́ба жо, 1d + 1a, _мн. затрудн._"
  (entry (headword #\л #\у #\н #\а #\́ #\- #\р #\ы #\́ #\б #\а) (def (main_symbol #\ж #\о) (index #\1 (scheme #\d)) (plus) (index #\1 (scheme #\a)) (difficult_plural)))
+
+ "зёва мо-жо 1a"
+ (entry (headword #\з #\ё #\в #\а) (def (main_symbol #\м #\о #\- #\ж #\о) (index #\1 (scheme #\a))))
 )
