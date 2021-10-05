@@ -15,7 +15,13 @@ Number <= +[0-9]
 
 headword <- (LETTER *(LETTER | STRESS_MARK | '-'))
 
-def <- main_symbol ?comma ?(?ws index *(:'//' index)) ?extras ?irregular_forms ?comment ?alt_lemma
+def <- main_symbol ?comma ?(?ws index *(:'//' index)) 
+        ?extras ?irregular_forms ?idioms
+        ?comment ?alt_lemma
+
+idioms <- ?ws :'✧' ?ws idiom (:';' ?ws idiom)
+
+idiom <= +(LETTER | STRESS_MARK | '-' | ' ')
 
 irregular_forms <- ?ws :'△' +irregular_form
 
