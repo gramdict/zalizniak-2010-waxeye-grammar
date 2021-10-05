@@ -1,0 +1,60 @@
+dictionary <- +(entry ?ws NewLine)
+
+entry <- ?HomoNum headword ?StressInfo ws defs
+
+StressInfo <- ?ws (NoStress | NormallyNoStress)
+
+NoStress         <- :'(_без удар._)'
+NormallyNoStress <- :'(_нормально без удар._)'
+
+defs <= def *(:';' ?ws def)
+
+HomoNum <- ((Number '-' Number) | Number) :'/'
+
+Number <= +[0-9]
+
+headword <- (LETTER *(LETTER | STRESS_MARK | '-'))
+
+def <- main_symbol ?comma ?(?ws index *(:'//' index)) ?extras ?irregular_forms ?comment ?alt_lemma
+
+irregular_forms <- ?ws :'△' +irregular_form
+
+irregular_form <= irregular_plural_gen
+
+irregular_plural_gen <- ?ws :'_Р. мн._' ?ws forms
+
+forms <= form *(?ws :'//' ?ws form) 
+
+form <- ?old headword
+
+old <- :'_устар._' ?ws
+
+alt_lemma <- ?ws :'[//__' headword :'__]'
+
+comma <: ',' ?ws
+
+extras <= *(comma extra)
+
+extra <=  difficult_plural 
+        | difficult_plural_genitive
+
+difficult_plural <- :'_мн. избегается из-за совпадений с_ раб'
+difficult_plural_genitive <- :'_Р. мн. затрудн._'
+
+index <- (index_number ?'*' scheme ?'—') | '0'
+
+main_symbol <- 'межд.' | 'союз' | 'част.' | 'предик.' | 'мо' | 'м' | 'жо' | 'ж' | 'со' | 'с'
+
+index_number <= Number
+
+scheme <- [a-f] ?"'" ?"'"
+
+comment <: ?ws '(' *(comment | !')' . ) ')'
+
+ws <: +[ \t]
+
+LETTER <= [а-яА-ЯёЁ]
+
+STRESS_MARK <= [\u{0300}\u{0301}]
+
+NewLine <: '\r\n' | '\n' | '\r'
