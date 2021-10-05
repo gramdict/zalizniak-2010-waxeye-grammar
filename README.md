@@ -31,6 +31,10 @@ The script will also write successfully parsed entries to a file of a popular fo
 such as XML, JSON or YAML. This would be the end goal of this project, having the dictionary in a format
 that can be easily consumed by most programming languages.
 
+Among other benefits, having a structured version of the dictionary will simplify searching and filtering: 
+some symbols (e.g. ~ or –) have context-dependent meaning and full text search works incorrectly for them
+(see e.g. [this issue](https://github.com/gramdict/gramdict/issues/158)).
+
 ## Why Waxeye?
 
 Wikipedia lists [hundreds](https://en.wikipedia.org/wiki/Comparison_of_parser_generators) of parser generators.
