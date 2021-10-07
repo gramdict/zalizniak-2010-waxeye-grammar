@@ -1,5 +1,3 @@
-dictionary <- +(entry ?ws NewLine)
-
 entry <- ?HomoNum headword ?StressInfo ws defs
 
 StressInfo <- ?ws (NoStress | NormallyNoStress)
