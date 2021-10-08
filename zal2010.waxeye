@@ -22,25 +22,28 @@ index_sep <= slash_slash | plus
 
 slash_slash <- :'//'
 
-plus <- ?ws :'+' ?ws 
+plus        <- ?ws :'+' ?ws 
 
 idioms <- ?ws :'✧' ?ws idiom (:';' ?ws idiom)
 
-idiom <= +(LETTER | STRESS_MARK | [- (),] )
+idiom  <= +(LETTER | STRESS_MARK | [- (),] )
 
 irregular_forms <- ?ws :'△' +irregular_form
 
-irregular_form <= irregular_plural_gen
+irregular_form  <= irregular_plural_gen
 
 irregular_plural_gen <- ?ws :'_Р. мн._' ?ws forms
 
 forms <= form *(?ws :'//' ?ws form) 
 
-form <- ?old headword
+form <- ?style headword
 
-old <- :'_устар._' ?ws
+style <- (old | folksy) ? ws
 
-alt_lemma <- ?ws :'[//__' headword :'__]'
+old <- :'_устар._'
+folksy <- :'_нар.-поэт._'
+
+alt_lemma <- ?ws :'[//' ?style :'__' headword :'__' ?(ws def) :']'
 
 comma <: ',' ?ws
 

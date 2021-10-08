@@ -34,5 +34,6 @@ public class Main {
         }
         br.close();
         jsonFile.close();
+        parseErrorsFile.close();
     }
 }

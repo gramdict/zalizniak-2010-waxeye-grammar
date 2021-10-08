@@ -1,13 +1,13 @@
 (irregular_forms
  
  "△ _Р. мн._ су́деб //_устар._ суде́б"
- (irregular_forms (irregular_plural_gen (forms (form (headword #\с #\у #\́ #\д #\е #\б)) (form (old) (headword #\с #\у #\д #\е #\́ #\б)))))
+ (irregular_forms (irregular_plural_gen (forms (form (headword #\с #\у #\́ #\д #\е #\б)) (form (style (old)) (headword #\с #\у #\д #\е #\́ #\б)))))
 )
 
 (forms
  
  "су́деб //_устар._ суде́б"
- (forms (form (headword #\с #\у #\́ #\д #\е #\б)) (form (old) (headword #\с #\у #\д #\е #\́ #\б)))
+ (forms (form (headword #\с #\у #\́ #\д #\е #\б)) (form (style (old)) (headword #\с #\у #\д #\е #\́ #\б)))
 )
 
 (form
@@ -19,7 +19,7 @@
 (form
 
  "_устар._ судеб"
- (form (old) (headword #\с #\у #\д #\е #\б))
+ (form (style (old)) (headword #\с #\у #\д #\е #\б))
 )
 
 (scheme
@@ -94,10 +94,10 @@
  (entry (headword #\а #\́ #\м #\б #\а) (defs (def (main_symbol #\м #\е #\ж #\д #\.)) (def (main_symbol #\п #\р #\е #\д #\и #\к #\.))))
 
  "судьба́ ж 1*d △ _Р. мн._ су́деб //_устар._ суде́б"
- (entry (headword #\с #\у #\д #\ь #\б #\а #\́) (def (main_symbol #\ж) (index #\1 * (scheme #\d)) (irregular_forms (irregular_plural_gen (forms (form (headword #\с #\у #\́ #\д #\е #\б)) (form (old) (headword #\с #\у #\д #\е #\́ #\б)))))))
+ (entry (headword #\с #\у #\д #\ь #\б #\а #\́) (def (main_symbol #\ж) (index #\1 * (scheme #\d)) (irregular_forms (irregular_plural_gen (forms (form (headword #\с #\у #\́ #\д #\е #\б)) (form (style (old)) (headword #\с #\у #\д #\е #\́ #\б)))))))
 
  "судьба́ ж 1*d △ _Р. мн._ су́деб //_устар._ суде́б ✧ во́лею суде́б; каки́ми судьба́ми"
- (entry (headword #\с #\у #\д #\ь #\б #\а #\́) (def (main_symbol #\ж) (index #\1 * (scheme #\d)) (irregular_forms (irregular_plural_gen (forms (form (headword #\с #\у #\́ #\д #\е #\б)) (form (old) (headword #\с #\у #\д #\е #\́ #\б))))) (idioms (idiom #\в #\о #\́ #\л #\е #\ю #\  #\с #\у #\д #\е #\́ #\б) (idiom #\к #\а #\к #\и #\́ #\м #\и #\  #\с #\у #\д #\ь #\б #\а #\́ #\м #\и))))
+ (entry (headword #\с #\у #\д #\ь #\б #\а #\́) (def (main_symbol #\ж) (index #\1 * (scheme #\d)) (irregular_forms (irregular_plural_gen (forms (form (headword #\с #\у #\́ #\д #\е #\б)) (form (style (old)) (headword #\с #\у #\д #\е #\́ #\б))))) (idioms (idiom #\в #\о #\́ #\л #\е #\ю #\  #\с #\у #\д #\е #\́ #\б) (idiom #\к #\а #\к #\и #\́ #\м #\и #\  #\с #\у #\д #\ь #\б #\а #\́ #\м #\и))))
 
  "луна́-ры́ба жо, 1d + 1a, _мн. затрудн._"
  (entry (headword #\л #\у #\н #\а #\́ #\- #\р #\ы #\́ #\б #\а) (def (main_symbol #\ж #\о) (index #\1 (scheme #\d)) (plus) (index #\1 (scheme #\a)) (difficult_plural)))
