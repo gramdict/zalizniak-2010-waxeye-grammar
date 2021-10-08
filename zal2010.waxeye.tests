@@ -107,4 +107,7 @@
 
  "сала́га мо <жо 3a>"
  (entry (headword #\с #\а #\л #\а #\́ #\г #\а) (def (symbol #\м #\о) (angle_index (symbol #\ж #\о) (index #\3 (scheme #\a)))))
+
+ "ва́нька-вста́нька мо, <жо 3*a> + <жо 3*a>"
+ (entry (headword #\в #\а #\́ #\н #\ь #\к #\а #\- #\в #\с #\т #\а #\́ #\н #\ь #\к #\а) (def (symbol #\м #\о) (multiword_index (angle_index (symbol #\ж #\о) (index #\3 #\* (scheme #\a))) (angle_index (symbol #\ж #\о) (index #\3 #\* (scheme #\a))))))
 )
