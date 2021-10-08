@@ -13,9 +13,10 @@ Number <= +[0-9]
 
 headword <- (LETTER *(LETTER | STRESS_MARK | '-'))
 
-def <- main_symbol ?comma ?(?ws index *(index_sep index)) 
-        ?extras ?irregular_forms ?idioms
-        ?comment ?alt_lemma
+def <- main_symbol ?comma ?(?ws index *(index_sep index))
+        ?comma
+        ?extras ?irregular_forms ?comment ?idioms
+        ?alt_lemma
 
 index_sep <= slash_slash | plus
 
@@ -25,7 +26,7 @@ plus <- ?ws :'+' ?ws
 
 idioms <- ?ws :'✧' ?ws idiom (:';' ?ws idiom)
 
-idiom <= +(LETTER | STRESS_MARK | '-' | ' ')
+idiom <= +(LETTER | STRESS_MARK | [- (),] )
 
 irregular_forms <- ?ws :'△' +irregular_form
 
@@ -43,7 +44,7 @@ alt_lemma <- ?ws :'[//__' headword :'__]'
 
 comma <: ',' ?ws
 
-extras <= *(comma extra)
+extras <= extra *(comma extra)
 
 extra <=  difficult_plural 
         | difficult_plural_genitive
@@ -56,6 +57,7 @@ index <- (index_number ?'*' scheme ?'—') | '0'
 
 main_symbol <- 'межд.' | 'союз' | 'част.' | 'предик.' 
         | 'мо-жо' | 'мо' | 'м' | 'жо' | 'ж' | 'со' | 'с'
+        | 'п' | 'н'
 
 index_number <= Number
 
