@@ -1,4 +1,4 @@
-entry <- ?HomoNum headword ?StressInfo ws defs
+entry <- ?HomoNum headword ?StressInfo ?ws defs
 
 StressInfo <- ?ws (NoStress | NormallyNoStress)
 
@@ -13,14 +13,14 @@ Number <= +[0-9]
 
 headword <- (LETTER *(LETTER | STRESS_MARK | '-'))
 
-def <- main_symbol ?comma ?ws ?multiword_index
+def <- symbol ?comma ?ws ?multiword_index
         ?comma
         ?extras ?irregular_forms ?comment ?idioms
         ?alt_lemma
 
 multiword_index <= index_variants *(plus index_variants)
 
-index_variants <= index *(:'//' index)
+index_variants <= index_node *(:'//' index_node)
 
 plus <: ?ws '+' ?ws 
 
@@ -38,7 +38,7 @@ forms <= form *(?ws :'//' ?ws form)
 
 form <- ?style headword
 
-style <- (old | folksy) ? ws
+style <- (old | folksy) ?ws
 
 old <- :'_устар._'
 folksy <- :'_нар.-поэт._'
@@ -56,9 +56,15 @@ difficult_plural_genitive <- :'_Р. мн. затрудн._'
 difficult_plural <- :'_мн. затрудн._'
         | :'_мн. избегается из-за совпадений с_ раб'
 
-index <- (index_number ?'*' scheme ?'—') | '0'
+index_node <= angle_index | index0 | index
 
-main_symbol <- 'межд.' | 'союз' | 'част.' | 'предик.' 
+index0 <- :'0'
+
+index <- index_number ?'*' scheme ?'—'
+
+angle_index <- :'<' symbol ?ws index :'>'
+
+symbol <- 'межд.' | 'союз' | 'част.' | 'предик.' 
         | 'мо-жо' | 'мо' | 'м' | 'жо' | 'ж' | 'со' | 'с'
         | 'п' | 'н'
 

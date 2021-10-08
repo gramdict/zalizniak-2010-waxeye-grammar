@@ -11,12 +11,12 @@ A typical test has the following form:
 
 ```
 "ма́ма жо 1a"
-(entry (headword #\м #\а #\́ #\м #\а) (def (main_symbol #\ж #\о) (index #\1 (scheme #\a))
+(entry (headword #\м #\а #\́ #\м #\а) (def (symbol #\ж #\о) (index #\1 (scheme #\a))
 ```
 
 The first line is the input and the second line is the expected output in the form of a Racket S-expression.
 In the above example we are expecting an (entry) with a (headword) of ма́ма and a definition comprising 
-the main_symbol жо and an index of 1a.
+the symbol жо and an index of 1a.
 
 The file run_tests.bat contains the command line to run the tests. It needs version 0.8.1 of Waxeye
 which has not been released yet but can be built from latest master using these instructions:

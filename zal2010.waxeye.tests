@@ -61,47 +61,50 @@
  fail
 
  "ма́ма жо 1a"
- (entry (headword #\м #\а #\́ #\м #\а) (def (main_symbol #\ж #\о) (index #\1 (scheme #\a))))
+ (entry (headword #\м #\а #\́ #\м #\а) (def (symbol #\ж #\о) (index #\1 (scheme #\a))))
 
  "а (_без удар._) союз"
- (entry (headword #\а) (StressInfo (NoStress)) (def (main_symbol #\с #\о #\ю #\з)))
+ (entry (headword #\а) (StressInfo (NoStress)) (def (symbol #\с #\о #\ю #\з)))
 
  "1/а част.; межд."
- (entry (HomoNum #\1) (headword #\а) (defs (def (main_symbol #\ч #\а #\с #\т #\.)) (def (main_symbol #\м #\е #\ж #\д #\.))))
+ (entry (HomoNum #\1) (headword #\а) (defs (def (symbol #\ч #\а #\с #\т #\.)) (def (symbol #\м #\е #\ж #\д #\.))))
 
  "2/а с 0 (_название буквы_ а)"
- (entry (HomoNum #\2) (headword #\а) (def (main_symbol #\с) (index #\0)))
+ (entry (HomoNum #\2) (headword #\а) (def (symbol #\с) (index0)))
 
  "2-3/ба́ба ж 1a (_кулич; молот_)"
- (entry (HomoNum #\2 #\- #\3) (headword #\б #\а #\́ #\б #\а) (def (main_symbol #\ж) (index #\1 (scheme #\a))))
+ (entry (HomoNum #\2 #\- #\3) (headword #\б #\а #\́ #\б #\а) (def (symbol #\ж) (index #\1 (scheme #\a))))
 
  "бо̀й-ба́ба жо 1a"
- (entry (headword #\б #\о #\̀ #\й #\- #\б #\а #\́ #\б #\а) (def (main_symbol #\ж #\о) (index #\1 (scheme #\a))))
+ (entry (headword #\б #\о #\̀ #\й #\- #\б #\а #\́ #\б #\а) (def (symbol #\ж #\о) (index #\1 (scheme #\a))))
 
  "даба́ ж 1b—"
- (entry (headword #\д #\а #\б #\а #\́ ) (def (main_symbol #\ж) (index #\1 (scheme #\b) #\—)))
+ (entry (headword #\д #\а #\б #\а #\́ ) (def (symbol #\ж) (index #\1 (scheme #\b) #\—)))
 
  "раба́ жо 1b, _мн. избегается из-за совпадений с_ раб, _Р. мн. затрудн._"
- (entry (headword #\р #\а #\б #\а #\́ ) (def (main_symbol #\ж #\о) (index #\1 (scheme #\b)) (extras (difficult_plural) (difficult_plural_genitive))))
+ (entry (headword #\р #\а #\б #\а #\́ ) (def (symbol #\ж #\о) (index #\1 (scheme #\b)) (extras (difficult_plural) (difficult_plural_genitive))))
 
  "изба́ ж, 1d//1d'"
- (entry (headword #\и #\з #\б #\а #\́ ) (def (main_symbol #\ж) (index_variants (index #\1 (scheme #\d)) (index #\1 (scheme #\d #\')))))
+ (entry (headword #\и #\з #\б #\а #\́ ) (def (symbol #\ж) (index_variants (index #\1 (scheme #\d)) (index #\1 (scheme #\d #\')))))
 
  "на́долба ж 1a [//__на́долб__]"
- (entry (headword #\н #\а #\́ #\д #\о #\л #\б #\а) (def (main_symbol #\ж) (index #\1 (scheme #\a)) (alt_lemma (headword #\н #\а #\́ #\д #\о #\л #\б))))
+ (entry (headword #\н #\а #\́ #\д #\о #\л #\б #\а) (def (symbol #\ж) (index #\1 (scheme #\a)) (alt_lemma (headword #\н #\а #\́ #\д #\о #\л #\б))))
 
  "а́мба межд.; предик."
- (entry (headword #\а #\́ #\м #\б #\а) (defs (def (main_symbol #\м #\е #\ж #\д #\.)) (def (main_symbol #\п #\р #\е #\д #\и #\к #\.))))
+ (entry (headword #\а #\́ #\м #\б #\а) (defs (def (symbol #\м #\е #\ж #\д #\.)) (def (symbol #\п #\р #\е #\д #\и #\к #\.))))
 
  "судьба́ ж 1*d △ _Р. мн._ су́деб //_устар._ суде́б"
- (entry (headword #\с #\у #\д #\ь #\б #\а #\́) (def (main_symbol #\ж) (index #\1 * (scheme #\d)) (irregular_forms (irregular_plural_gen (forms (form (headword #\с #\у #\́ #\д #\е #\б)) (form (style (old)) (headword #\с #\у #\д #\е #\́ #\б)))))))
+ (entry (headword #\с #\у #\д #\ь #\б #\а #\́) (def (symbol #\ж) (index #\1 * (scheme #\d)) (irregular_forms (irregular_plural_gen (forms (form (headword #\с #\у #\́ #\д #\е #\б)) (form (style (old)) (headword #\с #\у #\д #\е #\́ #\б)))))))
 
  "судьба́ ж 1*d △ _Р. мн._ су́деб //_устар._ суде́б ✧ во́лею суде́б; каки́ми судьба́ми"
- (entry (headword #\с #\у #\д #\ь #\б #\а #\́) (def (main_symbol #\ж) (index #\1 * (scheme #\d)) (irregular_forms (irregular_plural_gen (forms (form (headword #\с #\у #\́ #\д #\е #\б)) (form (style (old)) (headword #\с #\у #\д #\е #\́ #\б))))) (idioms (idiom #\в #\о #\́ #\л #\е #\ю #\  #\с #\у #\д #\е #\́ #\б) (idiom #\к #\а #\к #\и #\́ #\м #\и #\  #\с #\у #\д #\ь #\б #\а #\́ #\м #\и))))
+ (entry (headword #\с #\у #\д #\ь #\б #\а #\́) (def (symbol #\ж) (index #\1 * (scheme #\d)) (irregular_forms (irregular_plural_gen (forms (form (headword #\с #\у #\́ #\д #\е #\б)) (form (style (old)) (headword #\с #\у #\д #\е #\́ #\б))))) (idioms (idiom #\в #\о #\́ #\л #\е #\ю #\  #\с #\у #\д #\е #\́ #\б) (idiom #\к #\а #\к #\и #\́ #\м #\и #\  #\с #\у #\д #\ь #\б #\а #\́ #\м #\и))))
 
  "луна́-ры́ба жо, 1d + 1a, _мн. затрудн._"
- (entry (headword #\л #\у #\н #\а #\́ #\- #\р #\ы #\́ #\б #\а) (def (main_symbol #\ж #\о) (multiword_index (index #\1 (scheme #\d)) (index #\1 (scheme #\a))) (difficult_plural)))
+ (entry (headword #\л #\у #\н #\а #\́ #\- #\р #\ы #\́ #\б #\а) (def (symbol #\ж #\о) (multiword_index (index #\1 (scheme #\d)) (index #\1 (scheme #\a))) (difficult_plural)))
 
  "зёва мо-жо 1a"
- (entry (headword #\з #\ё #\в #\а) (def (main_symbol #\м #\о #\- #\ж #\о) (index #\1 (scheme #\a))))
+ (entry (headword #\з #\ё #\в #\а) (def (symbol #\м #\о #\- #\ж #\о) (index #\1 (scheme #\a))))
+
+ "сала́га мо <жо 3a>"
+ (entry (headword #\с #\а #\л #\а #\́ #\г #\а) (def (symbol #\м #\о) (angle_index (symbol #\ж #\о) (index #\3 (scheme #\a)))))
 )
