@@ -13,16 +13,16 @@ Number <= +[0-9]
 
 headword <- (LETTER *(LETTER | STRESS_MARK | '-'))
 
-def <- main_symbol ?comma ?(?ws index *(index_sep index))
+def <- main_symbol ?comma ?ws ?multiword_index
         ?comma
         ?extras ?irregular_forms ?comment ?idioms
         ?alt_lemma
 
-index_sep <= slash_slash | plus
+multiword_index <= index_variants *(plus index_variants)
 
-slash_slash <- :'//'
+index_variants <= index *(:'//' index)
 
-plus        <- ?ws :'+' ?ws 
+plus <: ?ws '+' ?ws 
 
 idioms <- ?ws :'✧' ?ws idiom (:';' ?ws idiom)
 
