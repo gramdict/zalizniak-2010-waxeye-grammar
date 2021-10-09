@@ -24,7 +24,7 @@ index_variants <= index_node *(:'//' index_node)
 
 plus <: ?ws '+' ?ws 
 
-idioms <- ?ws :'✧' ?ws idiom (:';' ?ws idiom)
+idioms <- ?ws :'✧' ?ws idiom *(:';' ?ws idiom)
 
 idiom  <= +(LETTER | STRESS_MARK | [- (),] )
 
@@ -72,11 +72,12 @@ circledNumberOptional <- :'[' circledNumber :']'
 
 circledNumber <- [①②③④⑤⑥⑦⑧⑨]
 
-angle_index <- :'<' symbol ?ws index :'>'
+angle_index <- (:'<' symbol ?ws index :'>') | (symbol ?ws index)
 
 symbols <= symbol *(:'//' symbol)
 
 symbol <- 'межд.' | 'союз' | 'част.' | 'предик.' 
+        | 'мн. _от_' | 'мн.' 
         | 'мо-жо' | 'мо' | 'м' | 'жо' | 'ж' | 'со' | 'с'
         | 'п' | 'н'
 

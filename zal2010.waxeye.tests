@@ -110,4 +110,10 @@
 
  "ва́нька-вста́нька мо, <жо 3*a> + <жо 3*a>"
  (entry (headword #\в #\а #\́ #\н #\ь #\к #\а #\- #\в #\с #\т #\а #\́ #\н #\ь #\к #\а) (def (symbol #\м #\о) (multiword_index (angle_index (symbol #\ж #\о) (index #\3 #\* (scheme #\a))) (angle_index (symbol #\ж #\о) (index #\3 #\* (scheme #\a))))))
+
+ "я́ства мн. _от_ с 1a"
+ (entry (headword #\я #\́ #\с #\т #\в #\а) (def (symbol #\м #\н #\. #\  #\_ #\о #\т #\_) (angle_index (symbol #\с) (index #\1 (scheme #\a)))))
+
+ "войска́ мн. <с 3b>"
+ (entry (headword #\в #\о #\й #\с #\к #\а #\́) (def (symbol #\м #\н #\.) (angle_index (symbol #\с) (index #\3 (scheme #\b)))))
 )

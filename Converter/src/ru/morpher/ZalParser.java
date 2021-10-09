@@ -466,16 +466,14 @@ public final class ZalParser extends org.waxeye.parser.Parser<ZalType>
         states.add(new State<ZalType>(edges, false));
         edges = new ArrayList<Edge<ZalType>>();
         edges.add(new Edge<ZalType>(new CharTransition<ZalType>(new char[]{';'}, new char[]{}, new char[]{}), 5, true));
-        states.add(new State<ZalType>(edges, false));
+        states.add(new State<ZalType>(edges, true));
         edges = new ArrayList<Edge<ZalType>>();
         edges.add(new Edge<ZalType>(new AutomatonTransition<ZalType>(42), 6, false));
-        edges.add(new Edge<ZalType>(new AutomatonTransition<ZalType>(13), 7, false));
+        edges.add(new Edge<ZalType>(new AutomatonTransition<ZalType>(13), 4, false));
         states.add(new State<ZalType>(edges, false));
         edges = new ArrayList<Edge<ZalType>>();
-        edges.add(new Edge<ZalType>(new AutomatonTransition<ZalType>(13), 7, false));
+        edges.add(new Edge<ZalType>(new AutomatonTransition<ZalType>(13), 4, false));
         states.add(new State<ZalType>(edges, false));
-        edges = new ArrayList<Edge<ZalType>>();
-        states.add(new State<ZalType>(edges, true));
         automata.add(new FA<ZalType>(ZalType.Idioms, FA.LEFT, states));
     }
 
@@ -1118,6 +1116,7 @@ public final class ZalParser extends org.waxeye.parser.Parser<ZalType>
         List<Edge<ZalType>> edges;
         edges = new ArrayList<Edge<ZalType>>();
         edges.add(new Edge<ZalType>(new CharTransition<ZalType>(new char[]{'<'}, new char[]{}, new char[]{}), 1, true));
+        edges.add(new Edge<ZalType>(new AutomatonTransition<ZalType>(38), 6, false));
         states.add(new State<ZalType>(edges, false));
         edges = new ArrayList<Edge<ZalType>>();
         edges.add(new Edge<ZalType>(new AutomatonTransition<ZalType>(38), 2, false));
@@ -1134,6 +1133,13 @@ public final class ZalParser extends org.waxeye.parser.Parser<ZalType>
         states.add(new State<ZalType>(edges, false));
         edges = new ArrayList<Edge<ZalType>>();
         states.add(new State<ZalType>(edges, true));
+        edges = new ArrayList<Edge<ZalType>>();
+        edges.add(new Edge<ZalType>(new AutomatonTransition<ZalType>(42), 7, false));
+        edges.add(new Edge<ZalType>(new AutomatonTransition<ZalType>(31), 5, false));
+        states.add(new State<ZalType>(edges, false));
+        edges = new ArrayList<Edge<ZalType>>();
+        edges.add(new Edge<ZalType>(new AutomatonTransition<ZalType>(31), 5, false));
+        states.add(new State<ZalType>(edges, false));
         automata.add(new FA<ZalType>(ZalType.Angle_index, FA.LEFT, states));
     }
 
@@ -1164,8 +1170,8 @@ public final class ZalParser extends org.waxeye.parser.Parser<ZalType>
         edges.add(new Edge<ZalType>(new CharTransition<ZalType>(new char[]{'ч'}, new char[]{}, new char[]{}), 9, false));
         edges.add(new Edge<ZalType>(new CharTransition<ZalType>(new char[]{'п'}, new char[]{}, new char[]{}), 13, false));
         edges.add(new Edge<ZalType>(new CharTransition<ZalType>(new char[]{'м'}, new char[]{}, new char[]{}), 19, false));
-        edges.add(new Edge<ZalType>(new CharTransition<ZalType>(new char[]{'ж'}, new char[]{}, new char[]{}), 23, false));
-        edges.add(new Edge<ZalType>(new CharTransition<ZalType>(new char[]{'с'}, new char[]{}, new char[]{}), 24, false));
+        edges.add(new Edge<ZalType>(new CharTransition<ZalType>(new char[]{'ж'}, new char[]{}, new char[]{}), 29, false));
+        edges.add(new Edge<ZalType>(new CharTransition<ZalType>(new char[]{'с'}, new char[]{}, new char[]{}), 30, false));
         edges.add(new Edge<ZalType>(new CharTransition<ZalType>(new char[]{'п'}, new char[]{}, new char[]{}), 5, false));
         edges.add(new Edge<ZalType>(new CharTransition<ZalType>(new char[]{'н'}, new char[]{}, new char[]{}), 5, false));
         states.add(new State<ZalType>(edges, false));
@@ -1223,13 +1229,32 @@ public final class ZalParser extends org.waxeye.parser.Parser<ZalType>
         edges.add(new Edge<ZalType>(new CharTransition<ZalType>(new char[]{'.'}, new char[]{}, new char[]{}), 5, false));
         states.add(new State<ZalType>(edges, false));
         edges = new ArrayList<Edge<ZalType>>();
-        edges.add(new Edge<ZalType>(new CharTransition<ZalType>(new char[]{'о'}, new char[]{}, new char[]{}), 20, false));
+        edges.add(new Edge<ZalType>(new CharTransition<ZalType>(new char[]{'н'}, new char[]{}, new char[]{}), 20, false));
+        edges.add(new Edge<ZalType>(new CharTransition<ZalType>(new char[]{'о'}, new char[]{}, new char[]{}), 26, false));
         states.add(new State<ZalType>(edges, true));
         edges = new ArrayList<Edge<ZalType>>();
-        edges.add(new Edge<ZalType>(new CharTransition<ZalType>(new char[]{'-'}, new char[]{}, new char[]{}), 21, false));
+        edges.add(new Edge<ZalType>(new CharTransition<ZalType>(new char[]{'.'}, new char[]{}, new char[]{}), 21, false));
+        states.add(new State<ZalType>(edges, false));
+        edges = new ArrayList<Edge<ZalType>>();
+        edges.add(new Edge<ZalType>(new CharTransition<ZalType>(new char[]{' '}, new char[]{}, new char[]{}), 22, false));
         states.add(new State<ZalType>(edges, true));
         edges = new ArrayList<Edge<ZalType>>();
-        edges.add(new Edge<ZalType>(new CharTransition<ZalType>(new char[]{'ж'}, new char[]{}, new char[]{}), 22, false));
+        edges.add(new Edge<ZalType>(new CharTransition<ZalType>(new char[]{'_'}, new char[]{}, new char[]{}), 23, false));
+        states.add(new State<ZalType>(edges, false));
+        edges = new ArrayList<Edge<ZalType>>();
+        edges.add(new Edge<ZalType>(new CharTransition<ZalType>(new char[]{'о'}, new char[]{}, new char[]{}), 24, false));
+        states.add(new State<ZalType>(edges, false));
+        edges = new ArrayList<Edge<ZalType>>();
+        edges.add(new Edge<ZalType>(new CharTransition<ZalType>(new char[]{'т'}, new char[]{}, new char[]{}), 25, false));
+        states.add(new State<ZalType>(edges, false));
+        edges = new ArrayList<Edge<ZalType>>();
+        edges.add(new Edge<ZalType>(new CharTransition<ZalType>(new char[]{'_'}, new char[]{}, new char[]{}), 5, false));
+        states.add(new State<ZalType>(edges, false));
+        edges = new ArrayList<Edge<ZalType>>();
+        edges.add(new Edge<ZalType>(new CharTransition<ZalType>(new char[]{'-'}, new char[]{}, new char[]{}), 27, false));
+        states.add(new State<ZalType>(edges, true));
+        edges = new ArrayList<Edge<ZalType>>();
+        edges.add(new Edge<ZalType>(new CharTransition<ZalType>(new char[]{'ж'}, new char[]{}, new char[]{}), 28, false));
         states.add(new State<ZalType>(edges, false));
         edges = new ArrayList<Edge<ZalType>>();
         edges.add(new Edge<ZalType>(new CharTransition<ZalType>(new char[]{'о'}, new char[]{}, new char[]{}), 5, false));
