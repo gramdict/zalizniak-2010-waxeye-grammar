@@ -13,7 +13,7 @@ Number <= +[0-9]
 
 headword <- (LETTER *(LETTER | STRESS_MARK | '-'))
 
-def <- symbol ?comma ?ws ?multiword_index
+def <- symbols ?comma ?ws ?multiword_index
         ?comma
         ?extras ?irregular_forms ?comment ?idioms
         ?alt_lemma
@@ -73,6 +73,8 @@ circledNumberOptional <- :'[' circledNumber :']'
 circledNumber <- [①②③④⑤⑥⑦⑧⑨]
 
 angle_index <- :'<' symbol ?ws index :'>'
+
+symbols <= symbol *(:'//' symbol)
 
 symbol <- 'межд.' | 'союз' | 'част.' | 'предик.' 
         | 'мо-жо' | 'мо' | 'м' | 'жо' | 'ж' | 'со' | 'с'
