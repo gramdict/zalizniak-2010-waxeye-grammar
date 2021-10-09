@@ -1138,6 +1138,7 @@ public final class ZalParser extends org.waxeye.parser.Parser<ZalType>
         List<Edge<ZalType>> edges;
         edges = new ArrayList<Edge<ZalType>>();
         edges.add(new Edge<ZalType>(new CharTransition<ZalType>(new char[]{'_'}, new char[]{}, new char[]{}), 1, true));
+        edges.add(new Edge<ZalType>(new CharTransition<ZalType>(new char[]{'÷'}, new char[]{}, new char[]{}), 17, true));
         states.add(new State<ZalType>(edges, false));
         edges = new ArrayList<Edge<ZalType>>();
         edges.add(new Edge<ZalType>(new CharTransition<ZalType>(new char[]{'Р'}, new char[]{}, new char[]{}), 2, true));
