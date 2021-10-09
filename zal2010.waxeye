@@ -58,7 +58,7 @@ old <- :'_устар._'
 folksy <- :'_нар.-поэт._'
 prof <- :'_проф._'
 
-alt_lemma <- ?ws :'[' ?:'//' ?style :'__' headword :'__' ?(ws def) ?see :']'
+alt_lemma <- ?ws :'[' ?:'//' ?style :'__' ?HomoNum headword :'__' ?(ws def) ?see :']'
 
 see <- ?ws :'(_см._)'
 
