@@ -17,7 +17,7 @@ def <- symbols ?comma ?ws ?multiword_index
         ?comma
         ?comment
         ?extras ?irregular_forms
-        ?alt_lemma
+        ?alt_entries
         ?comment ?idioms
         ?examples
         ?see_also
@@ -58,7 +58,9 @@ old <- :'_устар._'
 folksy <- :'_нар.-поэт._'
 prof <- :'_проф._'
 
-alt_lemma <- ?ws :'[' ?:'//' ?style :'__' ?HomoNum headword :'__' ?(ws def) ?see :']'
+alt_entries <- ?ws :'[' ?:'//' alt_entry *(?ws :'//' alt_entry) :']'
+
+alt_entry <- ?style :'__' ?HomoNum headword :'__' ?(ws def) ?see
 
 see <- ?ws :'(_см._)'
 

@@ -88,7 +88,7 @@
  (entry (headword #\и #\з #\б #\а #\́ ) (def (symbol #\ж) (index_variants (index #\1 (scheme #\d)) (index #\1 (scheme #\d #\')))))
 
  "на́долба ж 1a [//__на́долб__]"
- (entry (headword #\н #\а #\́ #\д #\о #\л #\б #\а) (def (symbol #\ж) (index #\1 (scheme #\a)) (alt_lemma (headword #\н #\а #\́ #\д #\о #\л #\б))))
+ (entry (headword #\н #\а #\́ #\д #\о #\л #\б #\а) (def (symbol #\ж) (index #\1 (scheme #\a)) (alt_entries (alt_entry (headword #\н #\а #\́ #\д #\о #\л #\б)))))
 
  "а́мба межд.; предик."
  (entry (headword #\а #\́ #\м #\б #\а) (defs (def (symbol #\м #\е #\ж #\д #\.)) (def (symbol #\п #\р #\е #\д #\и #\к #\.))))
