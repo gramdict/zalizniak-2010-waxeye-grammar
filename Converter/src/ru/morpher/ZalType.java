@@ -45,6 +45,7 @@ public enum ZalType
     Comma,
     Extras,
     Extra,
+    Paragraph,
     Difficult_plural_genitive,
     Difficult_plural,
     Yo,

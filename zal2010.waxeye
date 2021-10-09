@@ -62,6 +62,9 @@ extras <= extra *(comma extra)
 extra <=  difficult_plural 
         | difficult_plural_genitive
         | yo
+        | paragraph
+
+paragraph <- :'§' Number
 
 difficult_plural_genitive <- :'_Р. мн. затрудн._'
 difficult_plural <- :'_мн. затрудн._'
