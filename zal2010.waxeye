@@ -60,7 +60,15 @@ index_node <= angle_index | index0 | index
 
 index0 <- :'0'
 
-index <- index_number ?'*' scheme ?'—'
+index <- index_number ?'*' scheme ?'—' ?circledNumbers
+
+circledNumbers <- +circledNumberOpt
+
+circledNumberOpt <- circledNumber | circledNumberOptional
+
+circledNumberOptional <- :'[' circledNumber :']'
+
+circledNumber <- [①②③④⑤⑥⑦⑧⑨]
 
 angle_index <- :'<' symbol ?ws index :'>'
 
