@@ -1,4 +1,4 @@
-entry <- ?HomoNum headword ?StressInfo ?ws defs
+entry <- ?HomoNum headword ?StressInfo ?ws defs ?ws
 
 StressInfo <- ?ws (NoStress | NormallyNoStress)
 
