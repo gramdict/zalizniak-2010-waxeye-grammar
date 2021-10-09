@@ -116,4 +116,7 @@
 
  "войска́ мн. <с 3b>"
  (entry (headword #\в #\о #\й #\с #\к #\а #\́) (def (symbol #\м #\н #\.) (angle_index (symbol #\с) (index #\3 (scheme #\b)))))
+
+ "кирка́ ж, 3*d//3*b, (_орудие_) △ _Р. мн._ ки́рок"
+ (entry (headword #\к #\и #\р #\к #\а #\́) (def (symbol #\ж) (index_variants (index #\3 * (scheme #\d)) (index #\3 * (scheme #\b))) (irregular_forms (irregular_plural_gen (form (headword #\к #\и #\́ #\р #\о #\к))))))
 )

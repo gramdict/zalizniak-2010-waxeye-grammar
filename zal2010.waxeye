@@ -15,6 +15,7 @@ headword <- (LETTER *(LETTER | STRESS_MARK | '-'))
 
 def <- symbols ?comma ?ws ?multiword_index
         ?comma
+        ?comment
         ?extras ?irregular_forms
         ?alt_lemma
         ?comment ?idioms
@@ -22,13 +23,13 @@ def <- symbols ?comma ?ws ?multiword_index
 
 multiword_index <= index_variants *(plus index_variants)
 
-index_variants <= index_node *(:'//' index_node)
+index_variants <= index_node *(:'//' ?style index_node)
 
 plus <: ?ws '+' ?ws 
 
 idioms <- ?ws :'✧' ?ws idiom *(:';' ?ws idiom)
 
-idiom  <= +(LETTER | STRESS_MARK | [- (),_] )
+idiom  <= +(LETTER | STRESS_MARK | [- (),_./] | '[' | ']' )
 
 irregular_forms <- ?ws :'△' +irregular_form
 
@@ -84,6 +85,7 @@ symbols <= (symbol *(:'//' symbol)) | '§1' | '§2'
 symbol <- 'межд.' | 'союз' | 'част.' | 'предик.' 
         | 'мн. _от_' | 'мн.' 
         | 'мо-жо' | 'мо' | 'м' | 'жо' | 'ж' | 'со' | 'с'
+        | 'предл.'
         | 'п' | 'н'
 
 index_number <= Number
