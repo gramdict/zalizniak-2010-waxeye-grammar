@@ -20,7 +20,10 @@ def <- symbols ?comma ?ws ?multiword_index
         ?alt_lemma
         ?comment ?idioms
         ?examples
-        
+        ?see_also
+
+see_also <- :';' ?ws :'_см. также_' ?ws headword
+
 examples <- :':' ?ws example *(:';' ?ws example)
 
 example  <= +(LETTER | STRESS_MARK | [- (),_./] | '[' | ']' )
