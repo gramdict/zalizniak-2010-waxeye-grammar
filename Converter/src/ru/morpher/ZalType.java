@@ -24,6 +24,8 @@ public enum ZalType
     Number,
     Headword,
     Def,
+    Examples,
+    Example,
     Multiword_index,
     Index_variants,
     Plus,

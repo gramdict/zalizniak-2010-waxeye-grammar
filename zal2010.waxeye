@@ -19,7 +19,11 @@ def <- symbols ?comma ?ws ?multiword_index
         ?extras ?irregular_forms
         ?alt_lemma
         ?comment ?idioms
+        ?examples
         
+examples <- :':' ?ws example *(:';' ?ws example)
+
+example  <= +(LETTER | STRESS_MARK | [- (),_./] | '[' | ']' )
 
 multiword_index <= index_variants *(plus index_variants)
 

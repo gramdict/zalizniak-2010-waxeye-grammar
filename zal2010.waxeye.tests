@@ -119,4 +119,7 @@
 
  "кирка́ ж, 3*d//3*b, (_орудие_) △ _Р. мн._ ки́рок"
  (entry (headword #\к #\и #\р #\к #\а #\́) (def (symbol #\ж) (index_variants (index #\3 * (scheme #\d)) (index #\3 * (scheme #\b))) (irregular_forms (irregular_plural_gen (form (headword #\к #\и #\́ #\р #\о #\к))))))
+
+ "обни́мка ж 3*a: в обни́мку"
+ (entry (headword #\о #\б #\н #\и #\́ #\м #\к #\а) (def (symbol #\ж) (index #\3 #\* (scheme #\a)) (examples (example #\в #\  #\о #\б #\н #\и #\́ #\м #\к #\у))))
 )
