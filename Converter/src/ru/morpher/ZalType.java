@@ -38,6 +38,7 @@ public enum ZalType
     Old,
     Folksy,
     Alt_lemma,
+    See,
     Comma,
     Extras,
     Extra,

@@ -45,7 +45,9 @@ style <- (old | folksy) ?ws
 old <- :'_устар._'
 folksy <- :'_нар.-поэт._'
 
-alt_lemma <- ?ws :'[//' ?style :'__' headword :'__' ?(ws def) :']'
+alt_lemma <- ?ws :'[//' ?style :'__' headword :'__' ?(ws def) ?see :']'
+
+see <- ?ws :'(_см._)'
 
 comma <: ',' ?ws
 
