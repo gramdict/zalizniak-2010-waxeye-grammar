@@ -26,7 +26,7 @@ see_also <- :';' ?ws :'_см. также_' ?ws headword
 
 examples <- :':' ?ws example *(:';' ?ws example)
 
-example  <= +(LETTER | STRESS_MARK | [- (),_./] | '[' | ']' )
+example  <= +(LETTER | STRESS_MARK | [- (),_./—?] | '[' | ']' )
 
 multiword_index <= index_variants *(plus index_variants)
 
@@ -73,7 +73,7 @@ paragraph <- :'§' Number
 no_plural_genitive        <- :'_Р. мн. нет_'
 difficult_plural_genitive <- :'_Р. мн. затрудн._'
 difficult_plural          <- :'_мн. затрудн._'
-        | :'_мн. избегается из-за совпадений с_ раб'
+                           | :'_мн. избегается из-за совпадений с_ раб'
 yo <- :'ё'
 
 index_node <= angle_index | index0 | index
