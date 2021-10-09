@@ -1,7 +1,7 @@
 (irregular_forms
  
  "△ _Р. мн._ су́деб //_устар._ суде́б"
- (irregular_forms (irregular_plural_gen (forms (form (headword #\с #\у #\́ #\д #\е #\б)) (form (style (old)) (headword #\с #\у #\д #\е #\́ #\б)))))
+ (irregular_forms (irregular_form (case (plural_genitive)) (forms (form (headword #\с #\у #\́ #\д #\е #\б)) (form (style (old)) (headword #\с #\у #\д #\е #\́ #\б)))))
 )
 
 (forms
@@ -94,10 +94,10 @@
  (entry (headword #\а #\́ #\м #\б #\а) (defs (def (symbol #\м #\е #\ж #\д #\.)) (def (symbol #\п #\р #\е #\д #\и #\к #\.))))
 
  "судьба́ ж 1*d △ _Р. мн._ су́деб //_устар._ суде́б"
- (entry (headword #\с #\у #\д #\ь #\б #\а #\́) (def (symbol #\ж) (index #\1 * (scheme #\d)) (irregular_forms (irregular_plural_gen (forms (form (headword #\с #\у #\́ #\д #\е #\б)) (form (style (old)) (headword #\с #\у #\д #\е #\́ #\б)))))))
+ (entry (headword #\с #\у #\д #\ь #\б #\а #\́) (def (symbol #\ж) (index #\1 * (scheme #\d)) (irregular_forms (irregular_form (case (plural_genitive)) (forms (form (headword #\с #\у #\́ #\д #\е #\б)) (form (style (old)) (headword #\с #\у #\д #\е #\́ #\б)))))))
 
  "судьба́ ж 1*d △ _Р. мн._ су́деб //_устар._ суде́б ✧ во́лею суде́б; каки́ми судьба́ми"
- (entry (headword #\с #\у #\д #\ь #\б #\а #\́) (def (symbol #\ж) (index #\1 * (scheme #\d)) (irregular_forms (irregular_plural_gen (forms (form (headword #\с #\у #\́ #\д #\е #\б)) (form (style (old)) (headword #\с #\у #\д #\е #\́ #\б))))) (idioms (idiom #\в #\о #\́ #\л #\е #\ю #\  #\с #\у #\д #\е #\́ #\б) (idiom #\к #\а #\к #\и #\́ #\м #\и #\  #\с #\у #\д #\ь #\б #\а #\́ #\м #\и))))
+ (entry (headword #\с #\у #\д #\ь #\б #\а #\́) (def (symbol #\ж) (index #\1 * (scheme #\d)) (irregular_forms (irregular_form (case (plural_genitive)) (forms (form (headword #\с #\у #\́ #\д #\е #\б)) (form (style (old)) (headword #\с #\у #\д #\е #\́ #\б))))) (idioms (idiom #\в #\о #\́ #\л #\е #\ю #\  #\с #\у #\д #\е #\́ #\б) (idiom #\к #\а #\к #\и #\́ #\м #\и #\  #\с #\у #\д #\ь #\б #\а #\́ #\м #\и))))
 
  "луна́-ры́ба жо, 1d + 1a, _мн. затрудн._"
  (entry (headword #\л #\у #\н #\а #\́ #\- #\р #\ы #\́ #\б #\а) (def (symbol #\ж #\о) (multiword_index (index #\1 (scheme #\d)) (index #\1 (scheme #\a))) (difficult_plural)))
@@ -118,7 +118,7 @@
  (entry (headword #\в #\о #\й #\с #\к #\а #\́) (def (symbol #\м #\н #\.) (angle_index (symbol #\с) (index #\3 (scheme #\b)))))
 
  "кирка́ ж, 3*d//3*b, (_орудие_) △ _Р. мн._ ки́рок"
- (entry (headword #\к #\и #\р #\к #\а #\́) (def (symbol #\ж) (index_variants (index #\3 * (scheme #\d)) (index #\3 * (scheme #\b))) (irregular_forms (irregular_plural_gen (form (headword #\к #\и #\́ #\р #\о #\к))))))
+ (entry (headword #\к #\и #\р #\к #\а #\́) (def (symbol #\ж) (index_variants (index #\3 * (scheme #\d)) (index #\3 * (scheme #\b))) (irregular_forms (irregular_form (case (plural_genitive))(form (headword #\к #\и #\́ #\р #\о #\к))))))
 
  "обни́мка ж 3*a: в обни́мку"
  (entry (headword #\о #\б #\н #\и #\́ #\м #\к #\а) (def (symbol #\ж) (index #\3 #\* (scheme #\a)) (examples (example #\в #\  #\о #\б #\н #\и #\́ #\м #\к #\у))))

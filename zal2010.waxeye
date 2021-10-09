@@ -40,11 +40,15 @@ idiom  <= +(LETTER | STRESS_MARK | [- (),_./] | '[' | ']' )
 
 irregular_forms <- ?ws :'△' +irregular_form
 
-irregular_form  <= irregular_plural_gen
+irregular_form  <- ?ws case ?ws forms
 
-irregular_plural_gen <- ?ws :'_Р. мн._' ?ws forms
+case <- plural_genitive
+      | genitive
 
-forms <= form *(?ws :'//' ?ws form) 
+plural_genitive <- :'_Р. мн._'
+genitive        <- :'_Р._'
+
+forms <= form *(?ws :'//' ?ws form)
 
 form <- ?style headword
 
