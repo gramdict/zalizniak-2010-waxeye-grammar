@@ -28,7 +28,7 @@ plus <: ?ws '+' ?ws
 
 idioms <- ?ws :'✧' ?ws idiom *(:';' ?ws idiom)
 
-idiom  <= +(LETTER | STRESS_MARK | [- (),] )
+idiom  <= +(LETTER | STRESS_MARK | [- (),_] )
 
 irregular_forms <- ?ws :'△' +irregular_form
 
