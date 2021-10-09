@@ -51,10 +51,12 @@ extras <= extra *(comma extra)
 
 extra <=  difficult_plural 
         | difficult_plural_genitive
+        | yo
 
 difficult_plural_genitive <- :'_Р. мн. затрудн._'
 difficult_plural <- :'_мн. затрудн._'
         | :'_мн. избегается из-за совпадений с_ раб'
+yo <- :'ё'
 
 index_node <= angle_index | index0 | index
 

@@ -43,6 +43,7 @@ public enum ZalType
     Extra,
     Difficult_plural_genitive,
     Difficult_plural,
+    Yo,
     Index_node,
     Index0,
     Index,
