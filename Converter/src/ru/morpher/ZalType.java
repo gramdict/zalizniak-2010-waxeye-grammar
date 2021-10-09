@@ -37,6 +37,7 @@ public enum ZalType
     Style,
     Old,
     Folksy,
+    Prof,
     Alt_lemma,
     See,
     Comma,
