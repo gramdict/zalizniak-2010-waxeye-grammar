@@ -43,6 +43,7 @@ public enum ZalType
     Plural_genitive,
     Genitive,
     Short_masculine,
+    Passive_participle,
     Forms,
     Form,
     Style,
