@@ -17,10 +17,19 @@ def <- symbols ?comma ?ws ?multiword_index
         ?comma
         ?comment
         ?extras ?irregular_forms
+        ?opposite_aspects
         ?alt_entries
         ?comment ?idioms
         ?examples
         ?see_also
+
+opposite_aspects <- ?ws :'◑' opposite_aspect *(:'//' opposite_aspect)
+
+opposite_aspect <- (Number | RomanNumber) ?opposite_aspect_word
+
+RomanNumber <- 'I' ?'I' ?'I'
+
+opposite_aspect_word <- :'(' ?'-' headword :')'
 
 see_also <- :';' ?ws :'_см. также_' ?ws headword
 
