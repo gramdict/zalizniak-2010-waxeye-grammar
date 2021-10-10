@@ -48,6 +48,8 @@ public enum ZalType
     Old,
     Folksy,
     Prof,
+    Local,
+    Official,
     Alt_entries,
     Alt_entry,
     See,

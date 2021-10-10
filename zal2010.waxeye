@@ -63,15 +63,17 @@ forms <= form *(?ws :'//' ?ws form)
 
 form <- ?style headword
 
-style <- (old | folksy | prof) ?ws
+style <- (old | folksy | prof | local | official) ?ws
 
 old <- :'_устар._'
 folksy <- :'_нар.-поэт._'
 prof <- :'_проф._'
+local <- :'_местн._'
+official <- :'_офиц._'
 
-alt_entries <- ?ws :'[' ?:'//' alt_entry *(?ws :'//' alt_entry) :']'
+alt_entries <- ?ws :'[' ?:'//' alt_entry *(?ws :'//' alt_entry) ?ws ?:'=' :']'
 
-alt_entry <- ?style :'__' ?HomoNum headword :'__' ?(ws def) ?see
+alt_entry <- ?style ?:'__' ?HomoNum headword ?:'__' ?(ws def) ?see
 
 see <- ?ws :'(_см._)'
 
