@@ -33,7 +33,7 @@ RomanNumber <- 'I' ?'I' ?'I'
 
 opposite_aspect_word <- :'(' ?'-' headword :')'
 
-see_also <- :';' ?ws :'_см. также_' ?ws headword
+see_also <- :';' ?ws :'_см. также' :?' отдельно' :'_' ?ws headword
 
 examples <- :':' ?ws example *(:';' ?ws example)
 
