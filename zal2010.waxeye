@@ -90,10 +90,15 @@ extra <=  difficult_plural
         | difficult_comparative
         | difficult_short_feminine
         | difficult_short_except_masculine
+        | difficult_imperative
         | no_plural_genitive
+        | passive_participle_zhd
         | yo
         | paragraph
         | sec_case
+        | impersonal
+
+passive_participle_zhd <- :'_прич. страд._ -жд-'
 
 sec_case <- [ПР] '2' ?preps
 
@@ -109,6 +114,8 @@ difficult_plural          <- :'_мн. затрудн._'
 difficult_short_feminine  <- :'_кф ж затрудн._'
 difficult_short_except_masculine <- :'_кф затрудн._ (_кроме кф м_)'
 difficult_comparative     <- :'_сравн. затрудн._'
+difficult_imperative      <- :'_повел. затрудн._'
+impersonal                <- :'безл.'
 yo <- :'ё'
 
 index_node <= angle_index | index0 | index
