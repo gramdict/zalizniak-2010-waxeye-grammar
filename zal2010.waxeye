@@ -17,7 +17,8 @@ headword <- (LETTER *(LETTER | STRESS_MARK | '-'))
 def <- symbols ?comma ?ws ?multiword_index
         ?comma
         ?comment
-        ?extras ?irregular_forms
+        ?extras
+        ?irregular_forms
         ?opposite_aspects
         ?alt_entries
         ?comment ?idioms
@@ -83,6 +84,12 @@ extra <=  difficult_plural
         | no_plural_genitive
         | yo
         | paragraph
+        | sec_case
+
+sec_case <- [ПР] '2' ?preps
+
+preps <- :'(' prep ?(:',' ?ws prep) :')'
+prep <- 'в' | 'на'
 
 paragraph <- :'§' Number
 
