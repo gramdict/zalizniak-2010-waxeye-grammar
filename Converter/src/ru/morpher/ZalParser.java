@@ -597,13 +597,14 @@ public final class ZalParser extends org.waxeye.parser.Parser<ZalType>
         List<State<ZalType>> states = new ArrayList<State<ZalType>>();
         List<Edge<ZalType>> edges;
         edges = new ArrayList<Edge<ZalType>>();
-        edges.add(new Edge<ZalType>(new AutomatonTransition<ZalType>(7), 1, false));
-        edges.add(new Edge<ZalType>(new AutomatonTransition<ZalType>(12), 1, false));
+        edges.add(new Edge<ZalType>(new AutomatonTransition<ZalType>(8), 1, false));
+        edges.add(new Edge<ZalType>(new AutomatonTransition<ZalType>(7), 2, false));
+        edges.add(new Edge<ZalType>(new AutomatonTransition<ZalType>(12), 2, false));
         states.add(new State<ZalType>(edges, false));
         edges = new ArrayList<Edge<ZalType>>();
-        edges.add(new Edge<ZalType>(new AutomatonTransition<ZalType>(13), 2, false));
         states.add(new State<ZalType>(edges, true));
         edges = new ArrayList<Edge<ZalType>>();
+        edges.add(new Edge<ZalType>(new AutomatonTransition<ZalType>(13), 1, false));
         states.add(new State<ZalType>(edges, true));
         automata.add(new FA<ZalType>(ZalType.Opposite_aspect, FA.LEFT, states));
     }

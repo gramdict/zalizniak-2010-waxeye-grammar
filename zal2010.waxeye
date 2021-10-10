@@ -27,7 +27,7 @@ def <- symbols ?' нп' ?comma ?ws ?multiword_index
 
 opposite_aspects <- ?ws :'◑' opposite_aspect *(:'//' opposite_aspect)
 
-opposite_aspect <- (Number | RomanNumber) ?opposite_aspect_word
+opposite_aspect <- headword | ((Number | RomanNumber) ?opposite_aspect_word)
 
 RomanNumber <- 'I' ?'I' ?'I'
 
