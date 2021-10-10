@@ -85,6 +85,7 @@ extra <=  difficult_plural
         | difficult_plural_genitive
         | difficult_comparative
         | difficult_short_feminine
+        | difficult_short_except_masculine
         | no_plural_genitive
         | yo
         | paragraph
@@ -100,8 +101,9 @@ paragraph <- :'§' Number
 no_plural_genitive        <- :'_Р. мн. нет_'
 difficult_plural_genitive <- :'_Р. мн. затрудн._' | :'÷'
 difficult_plural          <- :'_мн. затрудн._'
-difficult_short_feminine  <- :'_кф ж затрудн._'
                            | :'_мн. избегается из-за совпадений с_ раб'
+difficult_short_feminine  <- :'_кф ж затрудн._'
+difficult_short_except_masculine <- :'_кф затрудн._ (_кроме кф м_)'
 difficult_comparative     <- :'_сравн. затрудн._'
 yo <- :'ё'
 
