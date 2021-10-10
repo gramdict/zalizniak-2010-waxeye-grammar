@@ -83,6 +83,7 @@ extras <= extra *(comma extra)
 
 extra <=  difficult_plural 
         | difficult_plural_genitive
+        | difficult_comparative
         | no_plural_genitive
         | yo
         | paragraph
@@ -99,6 +100,7 @@ no_plural_genitive        <- :'_Р. мн. нет_'
 difficult_plural_genitive <- :'_Р. мн. затрудн._' | :'÷'
 difficult_plural          <- :'_мн. затрудн._'
                            | :'_мн. избегается из-за совпадений с_ раб'
+difficult_comparative     <- :'_сравн. затрудн._'
 yo <- :'ё'
 
 index_node <= angle_index | index0 | index

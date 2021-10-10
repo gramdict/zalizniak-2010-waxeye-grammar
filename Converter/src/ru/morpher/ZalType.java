@@ -63,6 +63,7 @@ public enum ZalType
     No_plural_genitive,
     Difficult_plural_genitive,
     Difficult_plural,
+    Difficult_comparative,
     Yo,
     Index_node,
     Index0,
