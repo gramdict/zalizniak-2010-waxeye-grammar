@@ -70,6 +70,7 @@ public enum ZalType
     Symbol,
     Index_number,
     Scheme,
+    Slash_scheme,
     Comment,
     Ws,
     LETTER,

@@ -121,7 +121,9 @@ symbol <- 'межд.' | 'союз' | 'част.' | 'предик.'
 
 index_number <= Number
 
-scheme <- [a-f] ?"'" ?"'"
+scheme <- [a-f] ?"'" ?"'" ?slash_scheme
+
+slash_scheme <- :'/' [a-c] ?"'" ?"'"
 
 comment <: ?ws '(' *(comment | !')' . ) ')'
 
