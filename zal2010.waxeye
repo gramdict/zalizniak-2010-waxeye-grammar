@@ -14,7 +14,7 @@ Number <= +[0-9]
 
 headword <- (LETTER *(LETTER | STRESS_MARK | '-'))
 
-def <- symbols ?comma ?ws ?multiword_index
+def <- symbols ?' нп' ?comma ?ws ?multiword_index
         ?comma
         ?comment
         ?extras
@@ -104,6 +104,9 @@ index_node <= angle_index | index0 | index
 index0 <- :'0'
 
 index <- index_number ?'*' scheme ?circledNumbers ?'—' ?'✕' ?'~'
+        ?letter_seq
+
+letter_seq <- ?ws :'(-' +LETTER :'-)'
 
 circledNumbers <- +circledNumberOpt
 

@@ -65,6 +65,7 @@ public enum ZalType
     Index_node,
     Index0,
     Index,
+    Letter_seq,
     CircledNumbers,
     CircledNumberOpt,
     CircledNumberOptional,
