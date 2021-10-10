@@ -19,6 +19,7 @@ public enum ZalType
     StressInfo,
     NoStress,
     NormallyNoStress,
+    OftenNoStress,
     Defs,
     HomoNum,
     Number,
