@@ -55,9 +55,11 @@ irregular_form  <- ?ws case ?ws forms
 
 case <- plural_genitive
       | genitive
+      | short_masculine
 
 plural_genitive <- :'_Р. мн._'
 genitive        <- :'_Р._'
+short_masculine <- :'_кф м_'
 
 forms <= form *(?ws :'//' ?ws form)
 

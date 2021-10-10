@@ -42,6 +42,7 @@ public enum ZalType
     Case,
     Plural_genitive,
     Genitive,
+    Short_masculine,
     Forms,
     Form,
     Style,
