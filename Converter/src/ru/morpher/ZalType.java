@@ -25,6 +25,7 @@ public enum ZalType
     Number,
     Headword,
     Def,
+    Ref,
     Opposite_aspects,
     Opposite_aspect,
     RomanNumber,

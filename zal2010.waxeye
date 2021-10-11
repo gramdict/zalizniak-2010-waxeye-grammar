@@ -14,7 +14,9 @@ Number <= +[0-9]
 
 headword <- (LETTER *(LETTER | STRESS_MARK | '-'))
 
-def <- symbols ?' нп' ?comma ?ws ?multiword_index
+def <- symbols ?' нп' ?comma ?ws
+        ?ref
+        ?multiword_index
         ?comma
         ?comment
         ?extras
@@ -24,6 +26,14 @@ def <- symbols ?' нп' ?comma ?ws ?multiword_index
         ?comment ?idioms
         ?examples
         ?see_also
+
+ref <-  ('_спряж. см._' | '_склон. см._')
+        ?ws
+        ?HomoNum
+        headword
+        ?ws ?comment
+        ?comma
+        ?'_но без нсв_'
 
 opposite_aspects <- ?ws :'◑' opposite_aspect *(?ws +(((:'//') | (:';')) ?ws) ?style opposite_aspect)
 
