@@ -191,7 +191,7 @@ scheme <- [a-f] ?"'" ?"'" ?slash_scheme
 
 slash_scheme <- :'/' [a-c] ?"'" ?"'"
 
-comment <: ?ws '(' !'_но ' !'_и ' !'△' *(comment | !')' . ) ')'
+comment <: ?ws '(' !'_но ' !'_и ' !'△' !'_прош.' *(comment | !')' . ) ')'
 
 ws <: +[ \t]
 
