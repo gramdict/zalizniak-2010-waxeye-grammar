@@ -49,31 +49,36 @@ idioms <- ?ws :'✧' ?ws idiom *(:';' ?ws idiom)
 
 idiom  <= +(LETTER | STRESS_MARK | [- (),_./] | '[' | ']' )
 
-irregular_forms <- ?ws :'△' +irregular_form
+irregular_forms <- ?ws :'△' ?ws irregular_form *(comma irregular_form)
 
-irregular_form  <- ?ws case ?ws forms
+irregular_form  <- case ?ws forms
 
 case <- plural_genitive
       | genitive
       | short_masculine
       | passive_participle
+      | present_first_person_singular
+      | third_person_plural
 
 plural_genitive <- :'_Р. мн._'
 genitive        <- :'_Р._'
 short_masculine <- :'_кф м_'
 passive_participle <- :'_прич. страд._'
+present_first_person_singular <- :'_наст. 1 ед._'
+third_person_plural <- :'_3 мн._'
 
 forms <= form *(?ws :'//' ?ws form)
 
 form <- ?style headword
 
-style <- (old | folksy | prof | local | official) ?ws
+style <- (old | folksy | prof | local | official | vernacular) ?ws
 
 old <- :'_устар._'
 folksy <- :'_нар.-поэт._'
 prof <- :'_проф._'
 local <- :'_местн._'
 official <- :'_офиц._'
+vernacular <- :'_простореч._'
 
 alt_entries <- ?ws :'[' ?:'//' alt_entry *(?ws :'//' alt_entry) ?ws ?:'=' :']'
 
