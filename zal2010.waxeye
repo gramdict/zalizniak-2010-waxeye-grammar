@@ -19,9 +19,9 @@ def <- symbols ?' нп' ?comma ?ws
         ?multiword_index
         ?comma
         ?extras
+        ?alt_entries
         ?comment
         ?irregular_forms
-        ?alt_entries
         ?opposite_aspects
         ?comment
         ?idioms
