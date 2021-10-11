@@ -52,6 +52,7 @@ public enum ZalType
     Form,
     Style,
     Old,
+    Obsolete,
     Folksy,
     Prof,
     Local,
