@@ -116,6 +116,7 @@ extra <=  difficult_plural
         | sec_case
         | :'[' sec_case :']'
         | impersonal
+        | repetitive
 
 passive_participle_zhd <- :'_прич. страд._ -жд-'
 
@@ -135,6 +136,7 @@ difficult_short_except_masculine <- :'_кф затрудн._ (_кроме кф �
 difficult_comparative     <- :'_сравн. затрудн._'
 difficult_imperative      <- :'_повел. затрудн._'
 impersonal                <- :'безл.'
+repetitive                <- :'многокр.'
 yo <- :'ё'
 
 index_node <= angle_index | index0 | index

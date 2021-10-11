@@ -76,6 +76,7 @@ public enum ZalType
     Difficult_comparative,
     Difficult_imperative,
     Impersonal,
+    Repetitive,
     Yo,
     Index_node,
     Index0,
