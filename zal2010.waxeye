@@ -18,12 +18,13 @@ def <- symbols ?' нп' ?comma ?ws
         ?ref
         ?multiword_index
         ?comma
-        ?comment
         ?extras
+        ?comment
         ?irregular_forms
         ?alt_entries
         ?opposite_aspects
-        ?comment ?idioms
+        ?comment
+        ?idioms
         ?examples
         ?see_also
 
