@@ -101,6 +101,7 @@ extra <=  difficult_plural
         | yo
         | paragraph
         | sec_case
+        | :'[' sec_case :']'
         | impersonal
 
 passive_participle_zhd <- :'_прич. страд._ -жд-'
