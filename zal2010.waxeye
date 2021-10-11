@@ -20,6 +20,7 @@ def <- symbols ?' нп'
         ?comma ?ws
         ?ref
         ?multiword_index
+        ?comment
         ?comma
         ?extras
         ?alt_entries
@@ -190,7 +191,7 @@ scheme <- [a-f] ?"'" ?"'" ?slash_scheme
 
 slash_scheme <- :'/' [a-c] ?"'" ?"'"
 
-comment <: ?ws '(' !'_но ' !'_и ' *(comment | !')' . ) ')'
+comment <: ?ws '(' !'_но ' !'_и ' !'△' *(comment | !')' . ) ')'
 
 ws <: +[ \t]
 
