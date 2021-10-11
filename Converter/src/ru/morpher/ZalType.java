@@ -46,6 +46,7 @@ public enum ZalType
     Passive_participle,
     Present_first_person_singular,
     Third_person_plural,
+    Comparative,
     Forms,
     Form,
     Style,

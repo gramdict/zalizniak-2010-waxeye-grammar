@@ -59,6 +59,7 @@ case <- plural_genitive
       | passive_participle
       | present_first_person_singular
       | third_person_plural
+      | comparative
 
 plural_genitive <- :'_Р. мн._'
 genitive        <- :'_Р._'
@@ -66,6 +67,7 @@ short_masculine <- :'_кф м_'
 passive_participle <- :'_прич. страд._'
 present_first_person_singular <- :'_наст. 1 ед._'
 third_person_plural <- :'_3 мн._'
+comparative <- :'_сравн._'
 
 forms <= form *(?ws :'//' ?ws form)
 
