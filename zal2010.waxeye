@@ -47,7 +47,7 @@ plus <: ?ws '+' ?ws
 
 idioms <- ?ws :'✧' ?ws idiom *(:';' ws idiom)
 
-idiom  <= !long_symbol +(LETTER | STRESS_MARK | [- (),_./] | '[' | ']' )
+idiom  <= !long_symbol +(LETTER | STRESS_MARK | [- (),_./—] | '[' | ']' )
 
 irregular_forms <- ?ws :'△' ?ws irregular_form *(comma irregular_form)
 
@@ -143,7 +143,7 @@ circledNumberOptional <- :'[' circledNumber :']'
 
 circledNumber <- [①②③④⑤⑥⑦⑧⑨]
 
-angle_index <- (:'<' symbol ?ws index :'>') | (symbol ?ws index)
+angle_index <- (:'<' symbol ?comma ?ws index :'>') | (symbol ?ws index)
 
 symbols <= (symbol *(:'//' symbol)) | '§1' | '§2'
 
