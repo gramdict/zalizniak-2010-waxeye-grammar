@@ -14,7 +14,10 @@ Number <= +[0-9]
 
 headword <- (LETTER *(LETTER | STRESS_MARK | '-'))
 
-def <- symbols ?' нп' ?comma ?ws
+def <- symbols ?' нп'
+        ?alt_entries
+        ?comment
+        ?comma ?ws
         ?ref
         ?multiword_index
         ?comma
