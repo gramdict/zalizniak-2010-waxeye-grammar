@@ -71,7 +71,7 @@ comparative <- :'_сравн._'
 
 forms <= form *(?ws :'//' ?ws form)
 
-form <- ?style headword
+form <- ?style ?(:'(_затрудн._)' ?ws) headword
 
 style <- (old | folksy | prof | local | official | vernacular) ?ws
 
