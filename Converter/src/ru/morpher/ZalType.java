@@ -85,6 +85,7 @@ public enum ZalType
     CircledNumber,
     Angle_index,
     Symbols,
+    Long_symbol,
     Symbol,
     Index_number,
     Scheme,

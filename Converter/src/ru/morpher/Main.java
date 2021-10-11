@@ -1,14 +1,13 @@
 package ru.morpher;
 
-import org.waxeye.ast.print.ArrowPrinter;
 import org.waxeye.ast.print.SexprPrinter;
 import org.waxeye.parser.ParseResult;
 
 import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 import java.util.ArrayList;
-import java.util.List;
 
 public class Main {
 
@@ -19,8 +18,11 @@ public class Main {
                 .filter(Files::isRegularFile)
                 .forEach(file -> files.add(file.toString()));
 
+        String errorFileName = "out/parse-errors.txt";
+        //Files.copy(Paths.get(errorFileName), Paths.get("out/parse-errors-prev.txt"), StandardCopyOption.REPLACE_EXISTING);
+
         BufferedWriter jsonFile = new BufferedWriter(new FileWriter("out/zal.json"));
-        BufferedWriter parseErrorsFile = new BufferedWriter(new FileWriter("out/parse-errors.txt"));
+        BufferedWriter parseErrorsFile = new BufferedWriter(new FileWriter(errorFileName));
         ZalParser parser = new ZalParser();
         int ok = 0;
         int errors = 0;

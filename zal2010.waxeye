@@ -27,7 +27,7 @@ def <- symbols ?' нп' ?comma ?ws ?multiword_index
 
 opposite_aspects <- ?ws :'◑' opposite_aspect *(?ws +(((:'//') | (:';')) ?ws) ?style opposite_aspect)
 
-opposite_aspect <- headword | ((Number | RomanNumber) ?opposite_aspect_word)
+opposite_aspect <- !'св' !'нсв' headword | ((Number | RomanNumber) ?opposite_aspect_word)
 
 RomanNumber <- 'I' ?'I' ?'I'
 
@@ -45,9 +45,9 @@ index_variants <= index_node *(:'//' ?style index_node)
 
 plus <: ?ws '+' ?ws 
 
-idioms <- ?ws :'✧' ?ws idiom *(:';' ?ws idiom)
+idioms <- ?ws :'✧' ?ws idiom *(:';' ws idiom)
 
-idiom  <= +(LETTER | STRESS_MARK | [- (),_./] | '[' | ']' )
+idiom  <= !long_symbol +(LETTER | STRESS_MARK | [- (),_./] | '[' | ']' )
 
 irregular_forms <- ?ws :'△' ?ws irregular_form *(comma irregular_form)
 
@@ -147,7 +147,7 @@ angle_index <- (:'<' symbol ?ws index :'>') | (symbol ?ws index)
 
 symbols <= (symbol *(:'//' symbol)) | '§1' | '§2'
 
-symbol <- 'межд.' | 'союз' | 'част.' | 'предик.' 
+long_symbol <= 'межд.' | 'союз' | 'част.' | 'предик.' 
         | 'мн. _от_' | 'мн.' 
         | 'мо⁺' | 'жо⁺'
         | 'ф.'
@@ -156,9 +156,11 @@ symbol <- 'межд.' | 'союз' | 'част.' | 'предик.'
         | 'сравн.'
         | 'вводн.'
         | 'св-нсв' | 'св' | 'нсв' 
-        | 'мо-жо' | 'мо' | 'м' | 'жо' | 'ж' | 'со' | 'с'
+        | 'мо-жо' | 'мо' | 'жо'
         | 'предл.'
-        | 'п' | 'н'
+
+symbol <- long_symbol
+         | 'со' | 'м' | 'ж' | 'п' | 'н' | 'с'
 
 index_number <= Number
 
