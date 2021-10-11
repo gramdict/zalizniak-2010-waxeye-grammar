@@ -130,6 +130,7 @@ index0 <- :'0'
 index <- index_number ?'°' ?'*' scheme
         ?:' ~ 0'
         ?circledNumbers
+        ?ws
         ?'⌧' ?'—' ?'✕' ?'~' ?'÷'
         ?letter_seq
 
