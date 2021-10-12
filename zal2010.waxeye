@@ -157,9 +157,9 @@ index <- index_number ?'°' ?'*' scheme
         ?:' ~ 0'
         ?letter_seq
         ?circledNumbers
-        ?(comma yo)
         ?ws
         ?'⌧' ?'—' ?'✕' ?'~' ?'÷'
+        ?(comma yo)
 
 letter_seq <- ?ws :'(-' +LETTER :'-)'
 
