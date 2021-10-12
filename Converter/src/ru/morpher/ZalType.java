@@ -42,6 +42,7 @@ public enum ZalType
     Semicolon,
     Irregular_forms,
     Irregular_form,
+    Four_forms,
     Case,
     Plural_genitive,
     Genitive,

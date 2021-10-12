@@ -73,7 +73,12 @@ semicolon <: ';' ?ws
 irregular_forms <- ?ws :'△' ?ws irregular_form *((comma | semicolon) irregular_form)
 
 irregular_form  <- (case ?ws forms) 
-      | (:'_кф_' ?ws forms comma forms comma forms comma forms)
+      | (:'_кф_' four_forms ?(?ws :'[//' style four_forms :']'))
+
+four_forms <- ?ws forms
+                comma forms
+                comma forms
+                comma forms
 
 case <- plural_genitive
       | genitive
