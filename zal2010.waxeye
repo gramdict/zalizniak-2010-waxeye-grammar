@@ -163,7 +163,7 @@ circledNumbers <- +circledNumberOpt
 
 circledNumberOpt <- circledNumber | circledNumberOptional
 
-circledNumberOptional <- :'[' circledNumber :']'
+circledNumberOptional <- :'[' +circledNumber :']'
 
 circledNumber <- [①②③④⑤⑥⑦⑧⑨]
 
