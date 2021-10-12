@@ -73,6 +73,7 @@ public enum ZalType
     Prep,
     Paragraph,
     No_plural_genitive,
+    No_short_masculine,
     Difficult_plural_genitive,
     Difficult_plural,
     Difficult_short_feminine,
