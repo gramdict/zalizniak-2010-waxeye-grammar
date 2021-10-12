@@ -129,6 +129,7 @@ extra <=  difficult_plural
         | difficult_imperative
         | no_plural_genitive
         | no_short_masculine
+        | no_full_forms
         | passive_participle_zhd
         | paragraph
         | sec_case
@@ -147,6 +148,7 @@ paragraph <- :'§' Number
 
 no_plural_genitive        <- :'_Р. мн. нет_'
 no_short_masculine        <- :'_кф м нет_'
+no_full_forms             <- :'_пф нет_'
 difficult_plural_genitive <- :'_Р. мн. затрудн._' | :'÷'
 difficult_plural          <- :'_мн. затрудн._'
                            | :'_мн. избегается из-за совпадений с_ раб'
