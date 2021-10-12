@@ -117,7 +117,6 @@ extra <=  difficult_plural
         | difficult_imperative
         | no_plural_genitive
         | passive_participle_zhd
-        | yo
         | paragraph
         | sec_case
         | :'[' sec_case :']'
@@ -152,10 +151,11 @@ index0 <- :'0'
 
 index <- index_number ?'°' ?'*' scheme
         ?:' ~ 0'
+        ?letter_seq
         ?circledNumbers
+        ?(comma yo)
         ?ws
         ?'⌧' ?'—' ?'✕' ?'~' ?'÷'
-        ?letter_seq
 
 letter_seq <- ?ws :'(-' +LETTER :'-)'
 
