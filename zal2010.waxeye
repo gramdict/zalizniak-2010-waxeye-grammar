@@ -112,6 +112,7 @@ extra <=  difficult_plural
         | difficult_plural_genitive
         | difficult_comparative
         | difficult_short_feminine
+        | difficult_short_masculine
         | difficult_short_except_masculine
         | difficult_imperative
         | no_plural_genitive
@@ -137,6 +138,7 @@ difficult_plural_genitive <- :'_Р. мн. затрудн._' | :'÷'
 difficult_plural          <- :'_мн. затрудн._'
                            | :'_мн. избегается из-за совпадений с_ раб'
 difficult_short_feminine  <- :'_кф ж затрудн._'
+difficult_short_masculine <- :'_кф м затрудн._'
 difficult_short_except_masculine <- :'_кф затрудн._ (_кроме кф м_)'
 difficult_comparative     <- :'_сравн. затрудн._'
 difficult_imperative      <- :'_повел. затрудн._'
