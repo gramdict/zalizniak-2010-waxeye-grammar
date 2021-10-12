@@ -14,7 +14,11 @@ Number <= +[0-9]
 
 headword <- (LETTER *(LETTER | STRESS_MARK | '-'))
 
+plural_of <- ?ws :'_от_' ?ws
+        ?(?HomoNum headword) ?ws (see | def)
+
 def <- symbols ?' нп'
+        ?plural_of
         ?alt_entries
         ?comment
         ?comma ?ws
@@ -172,7 +176,7 @@ angle_index <- (:'<' symbols ?comma ?ws index :'>') | (symbol ?ws index)
 symbols <= (symbol *(:'//' symbol)) | '§1' | '§2'
 
 long_symbol <= 'межд.' | 'союз' | 'част.' | 'предик.' 
-        | 'мн. _от_' | 'мн. одуш.' | 'мн. неод.' | 'мн.'
+        | 'мн. одуш.' | 'мн. неод.' | 'мн.'
         | 'мо⁺' | 'жо⁺'
         | 'ф.'
         | 'мс-п'

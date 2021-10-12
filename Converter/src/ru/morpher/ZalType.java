@@ -24,6 +24,7 @@ public enum ZalType
     HomoNum,
     Number,
     Headword,
+    Plural_of,
     Def,
     Ref,
     Opposite_aspects,
