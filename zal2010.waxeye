@@ -68,9 +68,12 @@ idioms <- ?ws :'✧' ?ws idiom *(:';' ws idiom)
 
 idiom  <= !long_symbol +(LETTER | STRESS_MARK | [- (),_./—] | '[' | ']' )
 
-irregular_forms <- ?ws :'△' ?ws irregular_form *(comma irregular_form)
+semicolon <: ';' ?ws
 
-irregular_form  <- case ?ws forms
+irregular_forms <- ?ws :'△' ?ws irregular_form *((comma | semicolon) irregular_form)
+
+irregular_form  <- (case ?ws forms) 
+      | (:'_кф_' ?ws forms comma forms comma forms comma forms)
 
 case <- plural_genitive
       | genitive
@@ -90,7 +93,7 @@ comparative <- :'_сравн._'
 
 forms <= form *(?ws :'//' ?ws form)
 
-form <- ?style ?(:'(_затрудн._)' ?ws) headword
+form <- ?style ?(:'(_затрудн._)' ?ws) ?'-' headword
 
 style <- (old | obsolete | folksy | prof | local | official | vernacular) ?ws
 

@@ -39,6 +39,7 @@ public enum ZalType
     Plus,
     Idioms,
     Idiom,
+    Semicolon,
     Irregular_forms,
     Irregular_form,
     Case,
