@@ -19,7 +19,7 @@ public class Main {
                 .forEach(file -> files.add(file.toString()));
 
         String errorFileName = "out/parse-errors.txt";
-        //Files.copy(Paths.get(errorFileName), Paths.get("out/parse-errors-prev.txt"), StandardCopyOption.REPLACE_EXISTING);
+        Files.copy(Paths.get(errorFileName), Paths.get("out/parse-errors-prev.txt"), StandardCopyOption.REPLACE_EXISTING);
 
         BufferedWriter jsonFile = new BufferedWriter(new FileWriter("out/zal.json"));
         BufferedWriter parseErrorsFile = new BufferedWriter(new FileWriter(errorFileName));

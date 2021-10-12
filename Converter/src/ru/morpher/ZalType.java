@@ -65,6 +65,7 @@ public enum ZalType
     Local,
     Official,
     Vernacular,
+    Style_variant,
     Alt_entries,
     Alt_entry,
     See,

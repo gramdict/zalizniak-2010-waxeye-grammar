@@ -27,6 +27,7 @@ def <- symbols ?' нп'
         ?comment
         ?comma
         ?extras
+        ?style_variant
         ?alt_entries
         ?comment
         ?irregular_forms
@@ -66,7 +67,7 @@ plus <: ?ws '+' ?ws
 
 idioms <- ?ws :'✧' ?ws idiom *(:';' ws idiom)
 
-idiom  <= !long_symbol +(LETTER | STRESS_MARK | [- (),_./—] | '[' | ']' )
+idiom  <= !long_symbol +(LETTER | STRESS_MARK | [- (),_./—:] | '[' | ']' )
 
 semicolon <: ';' ?ws
 
@@ -119,6 +120,8 @@ prof <- :'_проф._'
 local <- :'_местн._'
 official <- :'_офиц._'
 vernacular <- :'_простореч._'
+
+style_variant <- ?ws :'[' style def :']'
 
 alt_entries <- ?ws :'[' ?:'//' alt_entry *(?ws :'//' alt_entry) ?ws ?:'=' :']'
 
