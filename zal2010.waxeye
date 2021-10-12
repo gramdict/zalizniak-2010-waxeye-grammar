@@ -73,9 +73,19 @@ semicolon <: ';' ?ws
 irregular_forms <- ?ws :'△' ?ws irregular_form *((comma | semicolon) irregular_form)
 
 irregular_form  <- (case ?ws forms) 
-      | (:'_кф_' four_forms ?(?ws :'[//' style four_forms :']'))
+      | short_forms
+      | plural_forms
 
-four_forms <- ?ws forms
+short_forms <- :'_кф_' four_forms ?(?ws :'[//' ?style four_forms :']')
+plural_forms <- :'_мн._' three_forms ?(?ws :'[//' ?style three_forms :']')
+
+first_form <- headword ?(:'|' headword)
+
+three_forms <- ?ws first_form
+                comma forms
+                comma forms
+
+four_forms <- ?ws first_form
                 comma forms
                 comma forms
                 comma forms
