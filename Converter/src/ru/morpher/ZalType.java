@@ -89,6 +89,7 @@ public enum ZalType
     Difficult_comparative,
     Difficult_imperative,
     Difficult_first_person_singular,
+    Difficult_present_passive_participle,
     Impersonal,
     Repetitive,
     Yo,
