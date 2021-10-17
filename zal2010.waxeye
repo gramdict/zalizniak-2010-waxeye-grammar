@@ -191,6 +191,7 @@ index <- index_number ?'°' ?'*' scheme
         ?circledNumbers
         ?ws
         ?'⌧' ?'—' ?'✕' ?'~' ?'÷'
+        ?(:'(' irregular_forms :')')
         ?(comma yo)
 
 letter_seq <- ?ws :'(-' +LETTER :'-)'
