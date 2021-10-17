@@ -31,12 +31,15 @@ def <- symbols ?' нп'
         ?alt_entries
         ?comment
         ?irregular_forms
+        ?alt_infinitive
         ?opposite_aspects
         ?comment
         ?idioms
         ?examples
         ?see_also
         ?alt_entries
+
+alt_infinitive <- ?ws :'[_инф. также_' ?ws headword :']'
 
 ref <-  ('_спряж. см._' | '_склон. см._')
         ?ws

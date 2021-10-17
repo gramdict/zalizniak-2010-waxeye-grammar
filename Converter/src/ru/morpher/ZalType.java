@@ -26,6 +26,7 @@ public enum ZalType
     Headword,
     Plural_of,
     Def,
+    Alt_infinitive,
     Ref,
     Opposite_aspects,
     Opposite_aspect,
