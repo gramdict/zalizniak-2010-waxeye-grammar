@@ -203,7 +203,7 @@ circledNumberOptional <- :'[' +circledNumber :']'
 
 circledNumber <- [①②③④⑤⑥⑦⑧⑨]
 
-angle_index <- (:'<' symbols ?comma ?ws index :'>') | (symbol ?ws index)
+angle_index <- (:'<' symbols ?comma ?ws index_variants :'>') | (symbol ?ws index)
 
 symbols <= (symbol *(:'//' symbol)) | '§1' | '§2'
 
