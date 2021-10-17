@@ -36,6 +36,7 @@ def <- symbols ?' нп'
         ?idioms
         ?examples
         ?see_also
+        ?alt_entries
 
 ref <-  ('_спряж. см._' | '_склон. см._')
         ?ws
