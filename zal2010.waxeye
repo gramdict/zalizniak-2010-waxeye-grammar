@@ -168,6 +168,7 @@ extra <=  difficult_plural
         | difficult_imperative
         | difficult_first_person_singular
         | difficult_present_passive_participle
+        | difficult_gerund
         | no_plural_genitive
         | no_short_masculine
         | no_full_forms
@@ -198,6 +199,7 @@ difficult_short_masculine <- :'_кф м затрудн._'
 difficult_short_except_masculine <- :'_кф затрудн._ (_кроме кф м_)'
 difficult_comparative     <- :'_сравн. затрудн._'
 difficult_imperative      <- :'_повел. затрудн._'
+difficult_gerund          <- :'_деепр. затрудн._'
 difficult_first_person_singular <- :'_буд. 1 ед. затрудн._' 
                                  | :'_наст. 1 ед. затрудн._'
 difficult_present_passive_participle <- :'_прич. страд. наст. затрудн._'

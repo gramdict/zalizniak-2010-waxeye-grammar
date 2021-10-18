@@ -96,6 +96,7 @@ public enum ZalType
     Difficult_short_except_masculine,
     Difficult_comparative,
     Difficult_imperative,
+    Difficult_gerund,
     Difficult_first_person_singular,
     Difficult_present_passive_participle,
     Impersonal,
