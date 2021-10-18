@@ -69,7 +69,7 @@ index_variants <= index_node *(:'//' ?style index_node)
 
 plus <: ?ws '+' ?ws 
 
-idioms <- ?ws :'✧' ?ws idiom *(:';' ws idiom)
+idioms <- ?ws :'✧' ?ws idiom *(semicolon idiom)
 
 idiom  <= !long_symbol +(LETTER | STRESS_MARK | [- (),_./—:] | '[' | ']' )
 
@@ -80,9 +80,15 @@ irregular_forms <- ?ws :'△' ?ws irregular_form *((comma | semicolon) irregular
 irregular_form  <- (case ?ws forms) 
       | short_forms
       | plural_forms
+      | personal_forms
+      | past_forms
 
 short_forms <- :'_кф_' four_forms ?(?ws :'[//' ?style four_forms :']')
-plural_forms <- :'_мн._' three_forms ?(?ws :'[//' ?style three_forms :']')
+plural_forms <- :'_мн._' three_forms_variants
+personal_forms <- :('_буд._' | '_наст._') three_forms_variants
+past_forms <- :'_прош._' three_forms_variants
+
+three_forms_variants <- three_forms ?(?ws :'[//' ?style three_forms :']')
 
 first_form <- headword ?(:'|' headword)
 
@@ -102,6 +108,7 @@ case <- plural_genitive
       | present_first_person_singular
       | third_person_plural
       | comparative
+      | imperative
 
 plural_genitive <- :'_Р. мн._'
 genitive        <- :'_Р._'
@@ -110,6 +117,7 @@ passive_participle <- :'_прич. страд._'
 present_first_person_singular <- :'_наст. 1 ед._'
 third_person_plural <- :'_3 мн._'
 comparative <- :'_сравн._'
+imperative <- :'_повел._'
 
 forms <= form *(?ws :'//' ?ws form)
 
