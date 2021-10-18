@@ -203,7 +203,7 @@ index <- index_number ?'°' ?'*' scheme
         ?(:'(' irregular_forms :')')
         ?(comma yo)
 
-letter_seq <- ?ws :'(-' +LETTER :'-)'
+letter_seq <- ?ws :'(-' +LETTER :'-)' ?ws
 
 circledNumbers <- +circledNumberOpt
 
