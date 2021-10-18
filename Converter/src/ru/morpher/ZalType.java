@@ -27,6 +27,7 @@ public enum ZalType
     Plural_of,
     Def,
     Alt_infinitive,
+    Alt_infinitive_internal,
     Ref,
     Opposite_aspects,
     Opposite_aspect,

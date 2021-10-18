@@ -39,7 +39,10 @@ def <- symbols ?' нп'
         ?see_also
         ?alt_entries
 
-alt_infinitive <- ?ws :'[_инф. также_' ?ws headword :']'
+alt_infinitive <- ?ws :'[' alt_infinitive_internal :']'
+alt_infinitive_internal <=
+        (:'_инф. также_' ?ws headword)
+        | (:'//__' headword :'__')
 
 ref <-  ('_спряж. см._' | '_склон. см._')
         ?ws
