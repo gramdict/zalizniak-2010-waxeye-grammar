@@ -31,6 +31,7 @@ def <- symbols ?' нп'
         ?alt_entries
         ?comment
         ?irregular_forms
+        ?explicit_forms
         ?alt_infinitive
         ?opposite_aspects
         ?comment
@@ -78,7 +79,9 @@ idiom  <= !long_symbol +(LETTER | STRESS_MARK | [- (),_./—:] | '[' | ']' )
 
 semicolon <: ';' ?ws
 
-irregular_forms <- ?ws :'△' ?ws irregular_form *((comma | semicolon) irregular_form)
+explicit_forms <- ?ws irregular_form *((comma | semicolon) irregular_form)
+
+irregular_forms <- ?ws :'△' explicit_forms
 
 irregular_form  <- (case ?ws forms) 
       | short_forms

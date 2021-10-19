@@ -42,6 +42,7 @@ public enum ZalType
     Idioms,
     Idiom,
     Semicolon,
+    Explicit_forms,
     Irregular_forms,
     Irregular_form,
     Short_forms,
