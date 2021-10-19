@@ -50,7 +50,6 @@ public enum ZalType
     Past_forms,
     Two_forms_variants,
     Three_forms_variants,
-    First_form,
     Two_forms,
     Three_forms,
     Four_forms,
