@@ -184,6 +184,7 @@ extra <=  difficult_plural
         | no_full_forms
         | no_past_participle
         | no_future
+        | has_passive
         | passive_participle_zhd
         | paragraph
         | sec_case
@@ -205,6 +206,7 @@ no_short_masculine        <- :'_кф м нет_'
 no_full_forms             <- :'_пф нет_'
 no_future                 <- :'_буд. нет_' | :'_буд. в лит. языке нет_'
 no_past_participle        <- :'_прич. прош. нет_'
+has_passive               <- :'_имеется страд._'
 difficult_plural_genitive <- :'_Р. мн. затрудн._' | :'÷'
 difficult_plural          <- :'_мн. затрудн._'
                            | :'_мн. избегается из-за совпадений с_ раб'
