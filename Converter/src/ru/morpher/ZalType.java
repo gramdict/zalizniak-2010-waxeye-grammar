@@ -66,6 +66,7 @@ public enum ZalType
     Third_person_plural,
     Comparative,
     Imperative,
+    Gerund,
     Forms,
     Form,
     Style,

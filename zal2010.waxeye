@@ -126,6 +126,7 @@ case <- plural_genitive
       | third_person_plural
       | comparative
       | imperative
+      | gerund
 
 plural_genitive <- :'_Р. мн._'
 genitive        <- :'_Р._'
@@ -135,6 +136,7 @@ present_first_person_singular <- :'_наст. 1 ед._'
 third_person_plural <- :'_3 мн._'
 comparative <- :'_сравн._'
 imperative <- :'_повел._'
+gerund     <- :'_деепр._'
 
 forms <= form *(?ws :'//' ?ws form)
 
