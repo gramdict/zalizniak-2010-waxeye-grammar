@@ -95,6 +95,7 @@ public enum ZalType
     No_future,
     No_past_participle,
     Has_passive,
+    Has_passive_participle,
     Difficult_plural_genitive,
     Difficult_plural,
     Difficult_short_feminine,
