@@ -81,7 +81,7 @@ semicolon <: ';' ?ws
 
 explicit_forms <- ?ws irregular_form *((comma | semicolon) irregular_form)
 
-irregular_forms <- ?ws :'△' explicit_forms
+irregular_forms <- ?ws :('△' | ':') explicit_forms
 
 irregular_form  <- (case ?ws forms) 
       | short_forms
@@ -92,10 +92,11 @@ irregular_form  <- (case ?ws forms)
 short_forms <- :'_кф_' four_forms ?(?ws :'[//' ?style four_forms :']')
 plural_forms <- :'_мн._' three_forms_variants
 personal_forms <- :('_буд._' | '_наст._') (three_forms_variants | two_forms_variants)
-past_forms <- :'_прош._' three_forms_variants
+past_forms <- :'_прош._' (four_forms_variants | three_forms_variants | two_forms_variants)
 
 two_forms_variants <- two_forms ?(?ws :'[//' ?style two_forms :']')
 three_forms_variants <- three_forms ?(?ws :'[//' ?style three_forms :']')
+four_forms_variants <- four_forms ?(?ws :'[//' ?style four_forms :']')
 
 two_forms <- ?ws form
                 comma forms
@@ -121,7 +122,7 @@ case <- plural_genitive
 plural_genitive <- :'_Р. мн._'
 genitive        <- :'_Р._'
 short_masculine <- :'_кф м_'
-passive_participle <- :'_прич. страд._'
+passive_participle <- :'_прич. страд._' | :'_прич. страд. наст._'
 present_first_person_singular <- :'_наст. 1 ед._'
 third_person_plural <- :'_3 мн._'
 comparative <- :'_сравн._'
@@ -254,7 +255,7 @@ long_symbol <= 'межд.' | 'союз' | 'част.' | 'предик.'
 symbol <- long_symbol
          | 'со' | 'м' | 'ж' | 'п' | 'н' | 'с'
 
-index_number <= Number
+index_number <= Number | '△'
 
 scheme <- [a-f] ?"'" ?"'" ?slash_scheme
 
