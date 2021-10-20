@@ -91,12 +91,13 @@ irregular_form  <- (case ?ws forms)
 
 short_forms <- :'_кф_' four_forms ?(?ws :'[//' ?style four_forms :']')
 plural_forms <- :'_мн._' three_forms_variants
-personal_forms <- :('_буд._' | '_наст._') (three_forms_variants | two_forms_variants)
+personal_forms <- :('_буд._' | '_наст._') (six_forms_variants | three_forms_variants | two_forms_variants)
 past_forms <- :'_прош._' (four_forms_variants | three_forms_variants | two_forms_variants)
 
 two_forms_variants <- two_forms ?(?ws :'[//' ?style two_forms :']')
 three_forms_variants <- three_forms ?(?ws :'[//' ?style three_forms :']')
 four_forms_variants <- four_forms ?(?ws :'[//' ?style four_forms :']')
+six_forms_variants <- six_forms ?(?ws :'[//' ?style six_forms :']')
 
 two_forms <- ?ws form
                 comma forms
@@ -106,6 +107,13 @@ three_forms <- ?ws form
                 comma forms
 
 four_forms <- ?ws form
+                comma forms
+                comma forms
+                comma forms
+
+six_forms <- ?ws form
+                comma forms
+                comma forms
                 comma forms
                 comma forms
                 comma forms
