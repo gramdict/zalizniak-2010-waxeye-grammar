@@ -122,6 +122,7 @@ case <- plural_genitive
       | genitive
       | short_masculine
       | passive_participle
+      | past_passive_participle
       | present_first_person_singular
       | third_person_plural
       | comparative
@@ -132,6 +133,7 @@ plural_genitive <- :'_Р. мн._'
 genitive        <- :'_Р._'
 short_masculine <- :'_кф м_'
 passive_participle <- :'_прич. страд._' | :'_прич. страд. наст._'
+past_passive_participle <- :'_прич. прош._'
 present_first_person_singular <- :'_наст. 1 ед._'
 third_person_plural <- :'_3 мн._'
 comparative <- :'_сравн._'
@@ -225,7 +227,7 @@ difficult_first_person_singular <- :'_буд. 1 ед. затрудн._'
 difficult_present_passive_participle <- :'_прич. страд. наст. затрудн._'
 impersonal                <- :'безл.'
 repetitive                <- :'многокр.'
-yo <- :'ё'
+yo <- :'ё' | 'о'
 
 index_node <= angle_index | index0 | index
 
