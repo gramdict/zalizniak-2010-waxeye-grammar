@@ -1,7 +1,7 @@
 (irregular_forms
  
  "△ _Р. мн._ су́деб //_устар._ суде́б"
- (irregular_forms (irregular_form (case (plural_genitive)) (forms (form (headword #\с #\у #\́ #\д #\е #\б)) (form (style (old)) (headword #\с #\у #\д #\е #\́ #\б)))))
+ (irregular_forms (explicit_forms (irregular_form (irregular_form_kind (plural_genitive)) (forms (form (headword #\с #\у #\́ #\д #\е #\б)) (form (style (old)) (headword #\с #\у #\д #\е #\́ #\б))))))
 )
 
 (forms
@@ -61,68 +61,68 @@
  fail
 
  "ма́ма жо 1a"
- (entry (headword #\м #\а #\́ #\м #\а) (def (symbol #\ж #\о) (index #\1 (scheme #\a))))
+ (entry (headword #\м #\а #\́ #\м #\а) (def (symbol (fem_anim)) (index #\1 (scheme #\a))))
 
  "а (_без удар._) союз"
- (entry (headword #\а) (StressInfo (NoStress)) (def (symbol #\с #\о #\ю #\з)))
+ (entry (headword #\а) (StressInfo (NoStress)) (def (symbol (conjunction))))
 
  "1/а част.; межд."
- (entry (HomoNum #\1) (headword #\а) (defs (def (symbol #\ч #\а #\с #\т #\.)) (def (symbol #\м #\е #\ж #\д #\.))))
+ (entry (HomoNum #\1) (headword #\а) (defs (def (symbol (particle))) (def (symbol (interjection)))))
 
  "2/а с 0 (_название буквы_ а)"
- (entry (HomoNum #\2) (headword #\а) (def (symbol #\с) (index0)))
+ (entry (HomoNum #\2) (headword #\а) (def (symbol (neuter)) (index0)))
 
  "2-3/ба́ба ж 1a (_кулич; молот_)"
- (entry (HomoNum #\2 #\- #\3) (headword #\б #\а #\́ #\б #\а) (def (symbol #\ж) (index #\1 (scheme #\a))))
+ (entry (HomoNum #\2 #\- #\3) (headword #\б #\а #\́ #\б #\а) (def (symbol (fem)) (index #\1 (scheme #\a))))
 
  "бо̀й-ба́ба жо 1a"
- (entry (headword #\б #\о #\̀ #\й #\- #\б #\а #\́ #\б #\а) (def (symbol #\ж #\о) (index #\1 (scheme #\a))))
+ (entry (headword #\б #\о #\̀ #\й #\- #\б #\а #\́ #\б #\а) (def (symbol (fem_anim)) (index #\1 (scheme #\a))))
 
  "даба́ ж 1b—"
- (entry (headword #\д #\а #\б #\а #\́ ) (def (symbol #\ж) (index #\1 (scheme #\b) #\—)))
+ (entry (headword #\д #\а #\б #\а #\́ ) (def (symbol (fem)) (index #\1 (scheme #\b) #\—)))
 
  "раба́ жо 1b, _мн. избегается из-за совпадений с_ раб, _Р. мн. затрудн._"
- (entry (headword #\р #\а #\б #\а #\́ ) (def (symbol #\ж #\о) (index #\1 (scheme #\b)) (extras (difficult_plural) (difficult_plural_genitive))))
+ (entry (headword #\р #\а #\б #\а #\́ ) (def (symbol (fem_anim)) (index #\1 (scheme #\b)) (extras (difficult_plural) (difficult_plural_genitive))))
 
  "изба́ ж, 1d//1d'"
- (entry (headword #\и #\з #\б #\а #\́ ) (def (symbol #\ж) (index_variants (index #\1 (scheme #\d)) (index #\1 (scheme #\d #\')))))
+ (entry (headword #\и #\з #\б #\а #\́ ) (def (symbol (fem)) (index_variants (index #\1 (scheme #\d)) (index #\1 (scheme #\d #\')))))
 
  "на́долба ж 1a [//__на́долб__]"
- (entry (headword #\н #\а #\́ #\д #\о #\л #\б #\а) (def (symbol #\ж) (index #\1 (scheme #\a)) (alt_entries (alt_entry (headword #\н #\а #\́ #\д #\о #\л #\б)))))
+ (entry (headword #\н #\а #\́ #\д #\о #\л #\б #\а) (def (symbol (fem)) (index #\1 (scheme #\a)) (alt_entries (alt_entry (headword #\н #\а #\́ #\д #\о #\л #\б)))))
 
  "а́мба межд.; предик."
- (entry (headword #\а #\́ #\м #\б #\а) (defs (def (symbol #\м #\е #\ж #\д #\.)) (def (symbol #\п #\р #\е #\д #\и #\к #\.))))
+ (entry (headword #\а #\́ #\м #\б #\а) (defs (def (symbol (interjection))) (def (symbol (predicative)))))
 
- "судьба́ ж 1*d △ _Р. мн._ су́деб //_устар._ суде́б"
- (entry (headword #\с #\у #\д #\ь #\б #\а #\́) (def (symbol #\ж) (index #\1 * (scheme #\d)) (irregular_forms (irregular_form (case (plural_genitive)) (forms (form (headword #\с #\у #\́ #\д #\е #\б)) (form (style (old)) (headword #\с #\у #\д #\е #\́ #\б)))))))
+ "судьба́ ж 1*d △ _Р. мн._ су́деб//_устар._ суде́б"
+ (entry (headword #\с #\у #\д #\ь #\б #\а #\́) (def (symbol (fem)) (index #\1 * (scheme #\d)) (irregular_forms (explicit_forms (irregular_form (irregular_form_kind (plural_genitive)) (forms (form (headword #\с #\у #\́ #\д #\е #\б)) (form (style (old)) (headword #\с #\у #\д #\е #\́ #\б))))))))
 
- "судьба́ ж 1*d △ _Р. мн._ су́деб //_устар._ суде́б ✧ во́лею суде́б; каки́ми судьба́ми"
- (entry (headword #\с #\у #\д #\ь #\б #\а #\́) (def (symbol #\ж) (index #\1 * (scheme #\d)) (irregular_forms (irregular_form (case (plural_genitive)) (forms (form (headword #\с #\у #\́ #\д #\е #\б)) (form (style (old)) (headword #\с #\у #\д #\е #\́ #\б))))) (idioms (idiom #\в #\о #\́ #\л #\е #\ю #\  #\с #\у #\д #\е #\́ #\б) (idiom #\к #\а #\к #\и #\́ #\м #\и #\  #\с #\у #\д #\ь #\б #\а #\́ #\м #\и))))
+ "судьба́ ж 1*d △ _Р. мн._ су́деб//_устар._ суде́б ✧ во́лею суде́б; каки́ми судьба́ми"
+ (entry (headword #\с #\у #\д #\ь #\б #\а #\́) (def (symbol (fem)) (index #\1 * (scheme #\d)) (irregular_forms (explicit_forms (irregular_form (irregular_form_kind (plural_genitive)) (forms (form (headword #\с #\у #\́ #\д #\е #\б)) (form (style (old)) (headword #\с #\у #\д #\е #\́ #\б)))))) (idioms (idiom #\в #\о #\́ #\л #\е #\ю #\  #\с #\у #\д #\е #\́ #\б) (idiom #\к #\а #\к #\и #\́ #\м #\и #\  #\с #\у #\д #\ь #\б #\а #\́ #\м #\и))))
 
  "луна́-ры́ба жо, 1d + 1a, _мн. затрудн._"
- (entry (headword #\л #\у #\н #\а #\́ #\- #\р #\ы #\́ #\б #\а) (def (symbol #\ж #\о) (multiword_index (index #\1 (scheme #\d)) (index #\1 (scheme #\a))) (difficult_plural)))
+ (entry (headword #\л #\у #\н #\а #\́ #\- #\р #\ы #\́ #\б #\а) (def (symbol (fem_anim)) (multiword_index (index #\1 (scheme #\d)) (index #\1 (scheme #\a))) (difficult_plural)))
 
  "зёва мо-жо 1a"
- (entry (headword #\з #\ё #\в #\а) (def (symbol #\м #\о #\- #\ж #\о) (index #\1 (scheme #\a))))
+ (entry (headword #\з #\ё #\в #\а) (def (symbol (unisex)) (index #\1 (scheme #\a))))
 
  "сала́га мо <жо 3a>"
- (entry (headword #\с #\а #\л #\а #\́ #\г #\а) (def (symbol #\м #\о) (angle_index (symbol #\ж #\о) (index #\3 (scheme #\a)))))
+ (entry (headword #\с #\а #\л #\а #\́ #\г #\а) (def (symbol (masc_anim)) (angle_index (symbol (fem_anim)) (index #\3 (scheme #\a)))))
 
  "ва́нька-вста́нька мо, <жо 3*a> + <жо 3*a>"
- (entry (headword #\в #\а #\́ #\н #\ь #\к #\а #\- #\в #\с #\т #\а #\́ #\н #\ь #\к #\а) (def (symbol #\м #\о) (multiword_index (angle_index (symbol #\ж #\о) (index #\3 #\* (scheme #\a))) (angle_index (symbol #\ж #\о) (index #\3 #\* (scheme #\a))))))
+ (entry (headword #\в #\а #\́ #\н #\ь #\к #\а #\- #\в #\с #\т #\а #\́ #\н #\ь #\к #\а) (def (symbol (masc_anim)) (multiword_index (angle_index (symbol (fem_anim)) (index #\3 #\* (scheme #\a))) (angle_index (symbol (fem_anim)) (index #\3 #\* (scheme #\a))))))
 
  "я́ства мн. _от_ с 1a"
- (entry (headword #\я #\́ #\с #\т #\в #\а) (def (symbol #\м #\н #\. #\  #\_ #\о #\т #\_) (angle_index (symbol #\с) (index #\1 (scheme #\a)))))
+ (entry (headword #\я #\́ #\с #\т #\в #\а) (def (symbol (plural)) (plural_of (def (symbol (neuter)) (index 1 (scheme #\a))))))
 
  "войска́ мн. <с 3b>"
- (entry (headword #\в #\о #\й #\с #\к #\а #\́) (def (symbol #\м #\н #\.) (angle_index (symbol #\с) (index #\3 (scheme #\b)))))
+ (entry (headword #\в #\о #\й #\с #\к #\а #\́) (def (symbol (plural)) (angle_index (symbol (neuter)) (index #\3 (scheme #\b)))))
 
  "кирка́ ж, 3*d//3*b, (_орудие_) △ _Р. мн._ ки́рок"
- (entry (headword #\к #\и #\р #\к #\а #\́) (def (symbol #\ж) (index_variants (index #\3 * (scheme #\d)) (index #\3 * (scheme #\b))) (irregular_forms (irregular_form (case (plural_genitive))(form (headword #\к #\и #\́ #\р #\о #\к))))))
+ (entry (headword #\к #\и #\р #\к #\а #\́) (def (symbol (fem)) (index_variants (index #\3 * (scheme #\d)) (index #\3 * (scheme #\b))) (irregular_forms (explicit_forms (irregular_form (irregular_form_kind (plural_genitive)) (form (headword #\к #\и #\́ #\р #\о #\к)))))))
 
  "обни́мка ж 3*a: в обни́мку"
- (entry (headword #\о #\б #\н #\и #\́ #\м #\к #\а) (def (symbol #\ж) (index #\3 #\* (scheme #\a)) (examples (example #\в #\  #\о #\б #\н #\и #\́ #\м #\к #\у))))
+ (entry (headword #\о #\б #\н #\и #\́ #\м #\к #\а) (def (symbol (fem)) (index #\3 #\* (scheme #\a)) (examples (example #\в #\  #\о #\б #\н #\и #\́ #\м #\к #\у))))
 
  "сарди́на жо 1a (_рыба, в живом виде_); _см. также_ сарди́ны"
- (entry (headword #\с #\а #\р #\д #\и #\́ #\н #\а) (def (symbol #\ж #\о) (index #\1 (scheme #\a)) (see_also (headword #\с #\а #\р #\д #\и #\́ #\н #\ы))))
+ (entry (headword #\с #\а #\р #\д #\и #\́ #\н #\а) (def (symbol (fem_anim)) (index #\1 (scheme #\a)) (see_also (headword #\с #\а #\р #\д #\и #\́ #\н #\ы))))
 )

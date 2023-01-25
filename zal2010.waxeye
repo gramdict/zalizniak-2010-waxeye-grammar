@@ -79,11 +79,11 @@ idiom  <= !long_symbol +(LETTER | STRESS_MARK | [- (),_./—:] | '[' | ']' )
 
 semicolon <: ';' ?ws
 
-explicit_forms <- ?ws irregular_form *((comma | semicolon) irregular_form)
-
 irregular_forms <- ?ws :('△' | ':') explicit_forms
 
-irregular_form  <- (case ?ws forms) 
+explicit_forms <- ?ws irregular_form *((comma | semicolon) irregular_form)
+
+irregular_form  <- (irregular_form_kind ?ws forms) 
       | short_forms
       | plural_forms
       | personal_forms
@@ -118,16 +118,16 @@ six_forms <- ?ws form
                 comma forms
                 comma forms
 
-case <- plural_genitive
-      | genitive
-      | short_masculine
-      | passive_participle
-      | past_passive_participle
-      | present_first_person_singular
-      | third_person_plural
-      | comparative
-      | imperative
-      | gerund
+irregular_form_kind <- plural_genitive
+                | genitive
+                | short_masculine
+                | passive_participle
+                | past_passive_participle
+                | present_first_person_singular
+                | third_person_plural
+                | comparative
+                | imperative
+                | gerund
 
 plural_genitive <- :'_Р. мн._'
 genitive        <- :'_Р._'
@@ -256,22 +256,53 @@ angle_index <- (:'<' symbols ?comma ?ws index_variants :'>') | (symbol ?ws index
 
 symbols <= (symbol *(:'//' symbol)) | '§1' | '§2'
 
-long_symbol <= 'межд.' | 'союз' | 'част.' | 'предик.' 
-        | 'мн. одуш.' | 'мн. неод.' | 'мн.'
-        | 'мо⁺' | 'жо⁺'
-        | 'ф.'
-        | 'мс-п'
-        | 'числ.-п'
-        | 'мс'
-        | 'сравн.'
-        | 'вводн.'
-        | 'св-нсв' | 'св' | 'нсв' 
-        | 'мо-жо' | 'мо' | 'жо'
-        | 'предл.'
-        | 'числ.'
+long_symbol <= interjection | conjunction | particle | predicative
+        | pl_anim | pl_inan | plural
+        | mo_plus | fo_plus
+        | surname
+        | adj_pron
+        | ordinal
+        | pronoun
+        | compar
+        | parenthetic
+        | dual_aspect | perfective | imperfective
+        | unisex | masc_anim | fem_anim
+        | preposition
+        | cardinal
 
 symbol <- long_symbol
-         | 'со' | 'м' | 'ж' | 'п' | 'н' | 'с'
+         | neut_anim | masc | fem | adj | adverb | neuter
+
+interjection <- :'межд.'
+conjunction  <- :'союз'
+particle     <- :'част.'
+predicative  <- :'предик.'
+pl_anim      <- :'мн. одуш.'
+pl_inan      <- :'мн. неод.'
+plural       <- :'мн.'
+mo_plus      <- :'мо⁺'
+fo_plus      <- :'жо⁺'
+surname      <- :'ф.'
+adj_pron     <- :'мс-п'
+ordinal      <- :'числ.-п'
+pronoun      <- :'мс'
+compar       <- :'сравн.'
+parenthetic  <- :'вводн.'
+dual_aspect  <- :'св-нсв'
+perfective   <- :'св'
+imperfective <- :'нсв'
+unisex       <- :'мо-жо'
+masc_anim    <- :'мо'
+fem_anim     <- :'жо'
+neut_anim    <- :'со'
+preposition  <- :'предл.'
+cardinal     <- :'числ.'
+masc         <- :'м'
+fem          <- :'ж'
+neuter       <- :'с'
+adj          <- :'п'
+adverb       <- :'н'
+
 
 index_number <= Number | '△'
 
