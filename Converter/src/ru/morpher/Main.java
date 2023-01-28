@@ -22,7 +22,7 @@ public class Main {
         //Files.copy(Paths.get(errorFileName), Paths.get("out/parse-errors-prev.txt"), StandardCopyOption.REPLACE_EXISTING);
 
         Writer jsonFile = new BufferedWriter(new OutputStreamWriter(
-            new FileOutputStream("zal.json"), "UTF-8"));
+            new FileOutputStream("zal.txt"), "UTF-8"));
         Writer parseErrorsFile = new BufferedWriter(new OutputStreamWriter(
             new FileOutputStream(errorFileName), "UTF-8"));
         ZalParser parser = new ZalParser();

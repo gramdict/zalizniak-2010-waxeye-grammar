@@ -1,2 +1,6 @@
 .idea/
 out/
+Converter/src/ru/morpher/ZalParser.java
+Converter/src/ru/morpher/ZalType.java
+zal.txt
+parse-errors.txt
