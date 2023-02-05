@@ -1,10 +1,10 @@
-entry <- ?HomoNum headword ?StressInfo ?ws defs ?ws
+entry <- ?HomoNum headword ?Unstressed ?ws defs ?ws
 
-StressInfo <- ?ws (NoStress | NormallyNoStress | OftenNoStress)
+Unstressed <- ?ws (AlwaysUnstressed | NormallyUnstressed | OftenUnstressed)
 
-NoStress         <- :'(_без удар._)'
-NormallyNoStress <- :'(_нормально без удар._)'
-OftenNoStress    <- :'(_часто без удар._)'
+AlwaysUnstressed   <- :'(_без удар._)'
+NormallyUnstressed <- :'(_нормально без удар._)'
+OftenUnstressed    <- :'(_часто без удар._)'
 
 defs <= def *(:';' ?ws def)
 

@@ -64,7 +64,7 @@
  (entry (headword #\м #\а #\́ #\м #\а) (def (symbol (fem_anim)) (index #\1 (scheme #\a))))
 
  "а (_без удар._) союз"
- (entry (headword #\а) (StressInfo (NoStress)) (def (symbol (conjunction))))
+ (entry (headword #\а) (Unstressed (AlwaysUnstressed)) (def (symbol (conjunction))))
 
  "1/а част.; межд."
  (entry (HomoNum #\1) (headword #\а) (defs (def (symbol (particle))) (def (symbol (interjection)))))
