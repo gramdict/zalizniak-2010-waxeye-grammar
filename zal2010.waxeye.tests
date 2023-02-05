@@ -112,7 +112,7 @@
  (entry (headword #\в #\а #\́ #\н #\ь #\к #\а #\- #\в #\с #\т #\а #\́ #\н #\ь #\к #\а) (def (symbol (masc_anim)) (multiword_index (angle_index (symbol (fem_anim)) (index #\3 #\* (scheme #\a))) (angle_index (symbol (fem_anim)) (index #\3 #\* (scheme #\a))))))
 
  "я́ства мн. _от_ с 1a"
- (entry (headword #\я #\́ #\с #\т #\в #\а) (def (symbol (plural)) (plural_of (def (symbol (neuter)) (index 1 (scheme #\a))))))
+ (entry (headword #\я #\́ #\с #\т #\в #\а) (def (symbol (plural)) (plural_of (def (symbol (neuter)) (index #\1 (scheme #\a))))))
 
  "войска́ мн. <с 3b>"
  (entry (headword #\в #\о #\й #\с #\к #\а #\́) (def (symbol (plural)) (angle_index (symbol (neuter)) (index #\3 (scheme #\b)))))
