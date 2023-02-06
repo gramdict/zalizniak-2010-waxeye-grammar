@@ -32,6 +32,7 @@ def <- symbols ?' нп'
         ?comment
         ?irregular_forms
         ?explicit_forms
+        ?(:comma ?:ws paragraph)
         ?alt_infinitive
         ?opposite_aspects
         ?comment
@@ -88,7 +89,11 @@ irregular_form  <- (irregular_form_kind ?ws forms)
       | plural_forms
       | personal_forms
       | past_forms
+      | past_passive_participle_forms
 
+past_passive_participle_forms <- (:'_прич. страд._' | :'_прич. страд. наст._') ?ws forms ?short_forms_in_parens
+
+short_forms_in_parens <- :'(' short_forms :')'
 short_forms <- :'_кф_' four_forms ?(?ws :'[//' ?style four_forms :']')
 plural_forms <- :'_мн._' three_forms_variants
 personal_forms <- :('_буд._' | '_наст._') (six_forms_variants | three_forms_variants | two_forms_variants)
@@ -121,24 +126,24 @@ six_forms <- ?ws form
 irregular_form_kind <- plural_genitive
                 | genitive
                 | short_masculine
-                | passive_participle
                 | past_passive_participle
                 | present_first_person_singular
                 | third_person_plural
                 | comparative
                 | imperative
                 | gerund
+                | present_participle
 
 plural_genitive <- :'_Р. мн._'
 genitive        <- :'_Р._'
 short_masculine <- :'_кф м_'
-passive_participle <- :'_прич. страд._' | :'_прич. страд. наст._'
 past_passive_participle <- :'_прич. прош._'
 present_first_person_singular <- :'_наст. 1 ед._'
 third_person_plural <- :'_3 мн._'
 comparative <- :'_сравн._'
 imperative <- :'_повел._'
 gerund     <- :'_деепр._'
+present_participle <- :'_прич. наст._'
 
 forms <= form *(?ws :'//' ?ws form)
 
