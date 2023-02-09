@@ -147,10 +147,13 @@ present_participle <- :'_прич. наст._'
 
 forms <= form *(?ws :'//' ?ws form)
 
-form <- ?style ?(:'(_затрудн._)' ?ws) ?'-' headword ?('|' headword)
+form <- *(?ws style_possibly_in_parens) ?'-' headword ?('|' headword)
 
-style <- (old | obsolete | folksy | prof | local | official | vernacular | poetic) ?ws
+style_possibly_in_parens <= style_in_parens | style
+style_in_parens <= :'(' style :')'
+style <- (difficult | old | obsolete | folksy | prof | local | official | vernacular | poetic) ?ws
 
+difficult <- :'_затрудн._'
 old <- :'_устар._'
 obsolete <- :'_устаревш._'
 folksy <- :'_нар.-поэт._'
@@ -195,6 +198,7 @@ extra <=  difficult_plural
         | no_future
         | has_passive
         | has_passive_participle
+        | has_present_passive_participle
         | passive_participle_zhd
         | paragraph
         | sec_case
@@ -218,6 +222,7 @@ no_future                 <- :'_буд. нет_' | :'_буд. в лит. язы�
 no_past_participle        <- :'_прич. прош. нет_'
 has_passive               <- :'_имеется страд._'
 has_passive_participle    <- :'_имеется прич. страд._'
+has_present_passive_participle <- :'_имеется прич. страд. наст._' ?(?ws forms)
 difficult_plural_genitive <- :'_Р. мн. затрудн._' | :'÷'
 difficult_plural          <- :'_мн. затрудн._'
                            | :'_мн. избегается из-за совпадений с_ раб'

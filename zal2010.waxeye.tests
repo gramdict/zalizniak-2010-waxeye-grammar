@@ -1,3 +1,15 @@
+(style_possibly_in_parens
+
+ "(_устар._)"
+ (style (old))
+)
+
+(has_present_passive_participle
+
+ "_имеется прич. страд. наст._ (_устар._) ведо́мый"
+ (has_present_passive_participle (form (style (old)) ))
+)
+
 (irregular_forms
  
  "△ _Р. мн._ су́деб //_устар._ суде́б"
